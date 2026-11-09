@@ -6,14 +6,117 @@
     "block_label": "Assessor block",
     "attribution": "Zoning maps: SF City Planning · Blocks and streets: DataSF",
     "view": {
-      "center": [-122.442, 37.758], "zoom": 11.9, "minZoom": 10.5,
-      "maxBounds": [[-122.75, 37.62], [-122.2, 37.9]],
-      "fit": [[-122.515, 37.705], [-122.355, 37.812]]
+      "center": [
+        -122.442,
+        37.758
+      ],
+      "zoom": 11.9,
+      "minZoom": 10.5,
+      "maxBounds": [
+        [
+          -122.75,
+          37.62
+        ],
+        [
+          -122.2,
+          37.9
+        ]
+      ],
+      "fit": [
+        [
+          -122.515,
+          37.705
+        ],
+        [
+          -122.355,
+          37.812
+        ]
+      ]
     },
     "pdfs": {
-      "1921": "sf_zoning_1921.pdf", "1935": "sf_zoning_1935.pdf", "1960": "sf_zoning_1960.pdf",
-      "1965": "sf_zoning_1965.pdf", "1968": "sf_zoning_1968.pdf", "1972": "sf_zoning_1972.pdf",
+      "1921": "sf_zoning_1921.pdf",
+      "1935": "sf_zoning_1935.pdf",
+      "1960": "sf_zoning_1960.pdf",
+      "1965": "sf_zoning_1965.pdf",
+      "1968": "sf_zoning_1968.pdf",
+      "1972": "sf_zoning_1972.pdf",
       "1975": "sf_zoning_1975.pdf"
     }
+  },
+  {
+    "slug": "pittsburgh",
+    "name": "Pittsburgh",
+    "attribution": "Zoning: Details Reviewed, WPRDC (CC BY) · Parcels: Allegheny County · Blocks: US Census",
+    "view": {
+      "center": [
+        -79.98,
+        40.44
+      ],
+      "zoom": 11.7,
+      "minZoom": 10,
+      "maxBounds": [
+        [
+          -80.35,
+          40.25
+        ],
+        [
+          -79.6,
+          40.65
+        ]
+      ],
+      "fit": [
+        [
+          -80.1,
+          40.38
+        ],
+        [
+          -79.86,
+          40.5
+        ]
+      ]
+    },
+    "form": {
+      "height_limit_ft": {
+        "stops": [
+          25,
+          35,
+          45,
+          85,
+          125,
+          265
+        ],
+        "colors": [
+          "#fff4dc",
+          "#fbdca0",
+          "#f2b860",
+          "#dc8a30",
+          "#a8561b",
+          "#5e2a08"
+        ]
+      },
+      "lot_sqft_per_unit": {
+        "stops": [
+          500,
+          1100,
+          1500,
+          2000,
+          2500,
+          3000,
+          5000,
+          8000
+        ],
+        "colors": [
+          "#6b1818",
+          "#9a3324",
+          "#c45a3a",
+          "#dc8456",
+          "#eba872",
+          "#f3c495",
+          "#f8d9b5",
+          "#fbe9cf"
+        ]
+      }
+    },
+    "block_label": "Census block"
   }
 ]

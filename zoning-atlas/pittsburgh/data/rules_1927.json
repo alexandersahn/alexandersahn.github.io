@@ -1,0 +1,194 @@
+{
+ "city": "Pittsburgh",
+ "year": 1927,
+ "no_scan": true,
+ "ordinance": "Pittsburgh Zoning Ordinance of 1923, as amended in 1926 and 1927, with its zone map corrected to August 1927",
+ "map_title": "City of Pittsburgh Zoning Map, adopted July 1923 and amended through August 1927, digitized by Details Reviewed (Western Pennsylvania Regional Data Center, CC BY)",
+ "source_url": "https://data.wprdc.org/dataset/pgh-zoning-1927",
+ "structure": "Three separate sets of districts: use, height and area. Each polygon here carries one of each. Colors show the use district; choose height or lot area under Color by.",
+ "hierarchy": "Use rules run from one-family houses only (C Residence) to nearly any use (Heavy Industrial). Height and area limits are set separately.",
+ "method": "Boundaries are the published digitization, clipped to land, and were not read from a scan for this atlas. Parks are shown with the district the digitized map gives them. Rules come from the 1923 ordinance and from the 1926 and June 1927 amendments printed in the Pittsburgh Municipal Record; side-yard rules and other amendments through August 1927 are not included. Each of today's tax parcels (Allegheny County, October 2026) takes the district covering most of it, and parcels are merged by census block for this map. Today's lots are not the lots of 1927.",
+ "boundary_rule": "Sec. 47: boundaries are streets unless shown otherwise, then lot lines, then by the map's scale.",
+ "form_notes": {
+  "lot_sqft_per_unit": "Shown for one-family houses; multiple dwellings could use less per family."
+ },
+ "height_districts": {
+  "H-1": "35 ft and 2\u00bd stories (Sec. 20).",
+  "H-2": "45 ft and 3 stories (Sec. 21).",
+  "H-3": "100 ft and 8 stories (Sec. 22).",
+  "H-4": "125 ft and 10 stories; dwellings other than hotels, apartment houses and club houses are held to 100 ft (Sec. 23).",
+  "H-5": "265 ft and 21 stories, and towers may go higher; dwellings other than hotels, apartment houses and club houses are held to 100 ft (Secs. 24, 29)."
+ },
+ "area_districts": {
+  "A-1": "Lot per family: one-family 4,000 sq ft; double house or two-family 2,500. Front yard 15 ft; rear yard 15% of lot depth, up to 25 ft (Sec. 32).",
+  "A-2": "Lot per family: one-family 2,500 sq ft; double house or two-family 1,875; multiple dwelling up to 3 stories 1,250, over 3 stories 750. Front yard 15 ft; rear yard 15% of lot depth, up to 25 ft (Sec. 33).",
+  "A-3": "Lot per family: one-family 2,000 sq ft; double house or two-family 1,500; multiple dwelling up to 3 stories 1,000, over 3 stories 625. Rear yard 15% of lot depth, up to 15 ft (Sec. 34).",
+  "A-4": "Lot per family: one-family 1,500 sq ft; double house or two-family 1,125; multiple dwelling up to 3 stories 600, over 3 stories 400. Rear yard 15% of lot depth, up to 15 ft (Sec. 35).",
+  "A-5": "Lot per family: one-family 1,200 sq ft; double house or two-family 900; multiple dwelling up to 3 stories 400, over 3 stories 250. Dwellings need a rear yard of 15% of lot depth, up to 15 ft; other buildings need none (Sec. 36)."
+ },
+ "zones": [
+  {
+   "code": "U-6",
+   "name": "C Residence District",
+   "family": "Residential",
+   "section": "9-A",
+   "summary": "One-family houses only. Added in September 1926 (Ordinance No. 449), this was Pittsburgh's first exclusive single-family district.",
+   "permitted_uses": [
+    "One-family dwelling",
+    "Church",
+    "Library",
+    "Greenhouse, as an accessory building",
+    "Accessory uses as in the A Residence District"
+   ],
+   "color": "#f2e38a"
+  },
+  {
+   "code": "U-5",
+   "name": "B Residence District",
+   "family": "Residential",
+   "section": "9",
+   "summary": "One- and two-family houses and double houses. Apartments are not allowed.",
+   "permitted_uses": [
+    "One-family dwelling",
+    "Two-family dwelling",
+    "Double house",
+    "Church",
+    "School, including faculty and student dormitories",
+    "Library",
+    "Garden, nursery and greenhouse",
+    "Minor garage or stable set back at least 60 ft from the front lot line",
+    "Small sale or lease signs and name plates"
+   ],
+   "color": "#a9cf6a"
+  },
+  {
+   "code": "U-4",
+   "name": "A Residence District",
+   "family": "Residential",
+   "section": "8",
+   "summary": "Houses and multiple dwellings (apartments).",
+   "permitted_uses": [
+    "One-family dwelling",
+    "Two-family dwelling",
+    "Double house",
+    "Multiple dwellings, Class A and Class B",
+    "Church",
+    "Public or semi-public educational or charitable institution",
+    "Telephone exchange, electric substation without rotary machinery, gas regulating station",
+    "Garden, nursery and greenhouse",
+    "Minor garage or stable set back at least 60 ft from the front lot line",
+    "Small sale or lease signs and name plates"
+   ],
+   "conditional_uses": [
+    "On a Major Street Plan street in Area District A-3 or A-4, a multiple dwelling of 8 or more stories may sell goods at retail on the ground floor, with the written consent of a majority of owners within 100 ft (Sec. 13-A, as amended June 1927)"
+   ],
+   "color": "#2f7a3a"
+  },
+  {
+   "code": "U-3",
+   "name": "Commercial District",
+   "family": "Commercial",
+   "section": "7",
+   "summary": "Any use except those listed as barred, which include most manufacturing, major garages and gasoline stations.",
+   "excluded_uses": [
+    "Everything barred in Light Industrial",
+    "Automobile wrecking yards; major garages; gasoline service stations",
+    "Blacksmith shops; brick, tile and terra cotta manufacture; stone or monument works",
+    "Carpet or bag cleaning; coal and coke storage; contractors' plants; lumber yards; storage warehouses",
+    "Brewing or distilling; milk bottling; oiled or leather goods manufacture; major stables; saw, planing or woodworking mills; repair shops other than carpenter shops without machinery",
+    "Manufacturing, unless most of the product is sold at retail on the premises"
+   ],
+   "permitted_uses": [
+    "Any use not listed as barred"
+   ],
+   "color": "#d95876"
+  },
+  {
+   "code": "U-2",
+   "name": "Light Industrial District",
+   "family": "Industrial",
+   "section": "6",
+   "summary": "Any use except heavy or noxious industry. Dwellings are allowed.",
+   "excluded_uses": [
+    "Everything barred in Heavy Industrial, except dwellings",
+    "Acid, chlorine, asphalt, celluloid, creosote, dyestuff, glue, match, paint, varnish, potash, printing ink, tar and soda manufacture",
+    "Blast furnaces, rolling mills, smelters, coke ovens, boiler works, iron or steel foundries",
+    "Petroleum refining and bulk petroleum or gasoline storage",
+    "Gas manufacture or storage over 10,000 cubic feet",
+    "Fat rendering; soap, tallow and grease manufacture",
+    "Junk, scrap, metal, paper or rag storage",
+    "Paper and pulp, oil cloth, linoleum, rubber manufacture",
+    "Rock crushing; tanning and storage of raw hides",
+    "In general, uses noxious or offensive by odor, dust, smoke, gas, vibration or noise"
+   ],
+   "permitted_uses": [
+    "Any use not listed as barred, including dwellings"
+   ],
+   "color": "#7b94d4"
+  },
+  {
+   "code": "U-1",
+   "name": "Heavy Industrial District",
+   "family": "Industrial",
+   "section": "5",
+   "summary": "Any use except a short list of the most noxious trades. Dwellings are barred, except watchmen's quarters.",
+   "excluded_uses": [
+    "Abattoirs",
+    "Cement, lime, gypsum or plaster of Paris manufacture",
+    "Dwellings, except quarters for watchmen and their families at an industrial site",
+    "Animal fertilizer manufacture",
+    "Gunpowder, fireworks or other explosives",
+    "Incineration, reduction or storage of garbage, offal, dead animals or refuse",
+    "Pyroxyline plastic manufacture",
+    "Stock yards"
+   ],
+   "permitted_uses": [
+    "Any use not listed as barred"
+   ],
+   "color": "#4e3a94"
+  }
+ ],
+ "vector": {
+  "source": "source/pghzoning1927.geojson",
+  "zone_field": "Zoning_District",
+  "zone_codes": {
+   "A Residence": "U-4",
+   "B Residence": "U-5",
+   "C Residence": "U-6",
+   "Commercial": "U-3",
+   "Light Industrial": "U-2",
+   "Heavy Industrial": "U-1"
+  },
+  "columns": {
+   "Height_District": "height_district",
+   "Area_District": "area_district"
+  },
+  "lookups": {
+   "height_limit_ft": {
+    "from": "height_district",
+    "values": {
+     "H-1": 35,
+     "H-2": 45,
+     "H-3": 100,
+     "H-4": 125,
+     "H-5": 265
+    }
+   },
+   "lot_sqft_per_unit": {
+    "from": "area_district",
+    "values": {
+     "A-1": 4000,
+     "A-2": 2500,
+     "A-3": 2000,
+     "A-4": 1500,
+     "A-5": 1200
+    }
+   }
+  }
+ },
+ "rules_sources": [
+  "https://archive.org/details/zoningordinancez1923pitt",
+  "https://archive.org/details/Pghmunicipalrecord1926",
+  "https://archive.org/details/Pghmunicipalrecord1927"
+ ]
+}

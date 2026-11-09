@@ -205,6 +205,7 @@ const wanted = new URLSearchParams(location.search).get("city");
 const city = cities.find(c => c.slug === wanted) || cities[0];
 const BASE = `${city.slug}/`;
 const PDFS = city.pdfs || {};
+for (const fld in city.form || {}) Object.assign(FORM[fld], city.form[fld]);
 document.title = `${city.name} · Historical Zoning Atlas`;
 if (cities.length > 1) {
   $("city-menu").innerHTML = cities.map(c => `<option value="${esc(c.slug)}"${c === city ? " selected" : ""}>${esc(c.name)}</option>`).join("");
@@ -320,7 +321,7 @@ function buildLegend() {
       <div class="bar" style="background:linear-gradient(90deg,${f.colors.join(",")})"></div>
       <div class="ticks">${f.stops.map(s => `<span>${fmt(s)}${f.unit}</span>`).join("")}</div></div>`
       : `<p class="note">The ${year} ordinance sets no ${f.label.toLowerCase()}.</p>`;
-    $("legend-note").textContent = has ? `${f.label} from the ${year} ordinance, by district. Gray: ${f.none.charAt(0).toLowerCase() + f.none.slice(1)} or public land.` : "";
+    $("legend-note").textContent = has ? `${f.label} from the ${year} ordinance, by district. Gray: ${f.none.charAt(0).toLowerCase() + f.none.slice(1)} or public land.${d.rules.form_notes?.[colorBy] ? " " + d.rules.form_notes[colorBy] : ""}` : "";
     return;
   }
   const zoned = Object.values(d.summary.acres).reduce((a, b) => a + b, 0);   // public land has no district, so it isn't in this total
@@ -336,7 +337,7 @@ function buildLegend() {
       <span class="ac">${pct(ac)}</span></button></li>`;
   };
   const items = [];
-  items.push(`<li><button type="button" data-zone="PUBLIC" aria-pressed="${filterZone === "PUBLIC"}">
+  if (d.summary.public_acres) items.push(`<li><button type="button" data-zone="PUBLIC" aria-pressed="${filterZone === "PUBLIC"}">
       <span class="sw pub"></span><span class="name">Public land</span><span class="ac">not zoned</span></button></li>`);
   const openAll = shown.length <= 25;
   const groups = [...new Set(shown.map(fam))].map(f => {
@@ -551,8 +552,9 @@ function historyRows(p) {
 function showDetail(p, lngLat) {
   const d = data[year];
   const facts = (extra) => `<dl class="facts">
-      <dt>${esc(BLOCK_LABEL)}</dt><dd>${p.block_num && p.block_num !== "null" ? esc(p.block_num) : "none today"}</dd>
+      ${p.unit === "source" ? "" : `<dt>${esc(BLOCK_LABEL)}</dt><dd>${p.block_num && p.block_num !== "null" ? esc(p.block_num) : "none today"}</dd>`}
       <dt>Area</dt><dd>${fmt(p.acres, 2)} acres</dd>
+      ${p.n_lots ? `<dt>Lots</dt><dd>${fmt(p.n_lots)}${p.n_split ? ` (${fmt(p.n_split)} crossed by a district boundary)` : ""}</dd>` : ""}
       ${year === TODAY || TODAY === null ? "" : `<dt>Zoned today</dt><dd>${p.today && p.today !== "null" ? esc(p.today) : "n/a"}</dd>`}${extra || ""}
     </dl>`;
   const hist = years.length > 1 ? `<h2>Same land in other years</h2><dl class="history">${historyRows(lngLat)}</dl>` : "";
@@ -589,6 +591,8 @@ function showDetail(p, lngLat) {
   if (p.unit === "modern_large") notes.push("This is a large modern parcel; the district shown is the part the old map assigned.");
   if (String(p.split) === "true") notes.push(`The ${year} map put more than one district on this block; this is one part of it.`);
   const conf = p.share >= 0.8 ? "High" : p.share >= 0.6 ? "Medium" : "Low";
+  const hd = p.height_district && (d.rules.height_districts || {})[p.height_district], ad = p.area_district && (d.rules.area_districts || {})[p.area_district];
+  if (hd || ad) r.form_rules = [hd && `Height district ${p.height_district}: ${hd}`, ad && `Area district ${p.area_district}: ${ad}`].filter(Boolean);
   const fr = r.form_rules && r.form_rules.length ? `<details open><summary>Building form rules</summary>${list(r.form_rules)}</details>` : "";
   $("detail").innerHTML = `
     <div class="zone-chip"><i style="background:${r.color}"></i>${esc(p.zone)}${r.section ? ` · Section ${esc(r.section)}` : ""}</div>

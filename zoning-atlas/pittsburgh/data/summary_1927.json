@@ -1,0 +1,15 @@
+{
+ "year": 1927,
+ "acres": {
+  "U-1": 1974.0,
+  "U-2": 2082.0,
+  "U-3": 1548.0,
+  "U-4": 4966.0,
+  "U-5": 13435.0,
+  "U-6": 513.0
+ },
+ "public_acres": 0,
+ "paper_acres": 0,
+ "paper_water_acres": 0,
+ "has_hatch": false
+}
