@@ -1,0 +1,270 @@
+{
+ "city": "San Francisco",
+ "year": 1921,
+ "ordinance": "Ordinance No. 5464 (New Series), Building Zone Ordinance, approved October 1921",
+ "map_title": "Use of Property Zone Map, City Planning Commission (M.M. O'Shaughnessy, City Engineer; R.S. Woodward, Asst. Engineer), Sections 1-14",
+ "source_pdf": "1921/Zoning_1921.pdf",
+ "structure": "Use districts only. The 1921 ordinance sets no height, bulk, lot-coverage or setback districts; the only form-type provisions are inside the First Residential rules (two-family dwelling needs 5,000 sq ft open lot area; garages capped at 4 cars).",
+ "hierarchy": "Cumulative: each district permits the uses of the more restrictive districts, except Heavy Industrial, which excludes dwellings.",
+ "boundary_rule": "Sec. 15: boundaries are street lines unless shown otherwise. Where two designations appear in a block 200 ft or less wide, the less restricted district runs 100 ft back from its street line; in blocks wider than 200 ft, 137.5 ft back or the rear lot line of lots fronting the less restricted district.",
+ "zones": [
+  {
+   "code": "R1",
+   "family": "Residential",
+   "name": "First Residential District",
+   "map_symbol": "diagonal hatching",
+   "section": 3,
+   "rank": 1,
+   "permitted_uses": [
+    "Single family dwelling",
+    "School",
+    "Church",
+    "Community club house",
+    "Nurseries, farms, truck gardens and greenhouses",
+    "Usual accessories not involving a business, incl. office of a musician, physician or dentist in their own residence",
+    "Garage or group of garages for not more than four automobiles",
+    "Two-family dwelling, if at least 5,000 sq ft of open area remains on the lot"
+   ],
+   "by_permit": [
+    "Temporary building for commerce or industry incidental to construction or residential development (Board of Supervisors)",
+    "Stable for not more than two cows or two horses (Board of Supervisors)"
+   ],
+   "form_rules": [
+    "Two-family dwelling requires 5,000 sq ft of open area on the lot",
+    "Accessory garages limited to four automobiles"
+   ],
+   "summary": "Single-family houses, schools, churches, clubhouses and garden uses. Two-family houses allowed only on lots leaving 5,000 sq ft open.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#c6d777"
+  },
+  {
+   "code": "R2",
+   "family": "Residential",
+   "name": "Second Residential District",
+   "map_symbol": "blank (white)",
+   "section": 4,
+   "rank": 2,
+   "permitted_uses": [
+    "All First Residential uses",
+    "Tenement house or apartment house",
+    "Flat",
+    "Boarding or lodging house",
+    "Hotel",
+    "Library",
+    "Public building",
+    "Hospital or sanitarium",
+    "Police station",
+    "Fire station",
+    "Philanthropic and eleemosynary institution other than a correctional institution"
+   ],
+   "by_permit": [],
+   "form_rules": [],
+   "summary": "Everything allowed in First Residential plus flats, apartments, tenements, boarding houses, hotels, hospitals and public buildings.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#549448"
+  },
+  {
+   "code": "C",
+   "family": "Commercial",
+   "name": "Commercial District",
+   "map_symbol": "solid black",
+   "section": 5,
+   "rank": 3,
+   "permitted_uses": [
+    "All residential uses (Sec. 3 and 4 uses may not be excluded)",
+    "Any business or commerce not listed as excluded",
+    "Printing shops and newspaper publishing",
+    "Light industries incidental to an amusement park",
+    "Electric sub-stations and telephone exchanges",
+    "Light manufacturing above the ground floor, or incidental to a retail business on the premises"
+   ],
+   "excluded_uses": [
+    "Automobile repair shop, unless part of a public garage",
+    "Bakeries employing more than five persons",
+    "Blacksmith or horseshoeing establishments",
+    "Bottling works",
+    "Carting, express or hauling yard, or storage yard other than for fuel",
+    "Contractors' plant or storage yard",
+    "Cooperage",
+    "Laundry employing more than ten people",
+    "Lumber yard",
+    "Uses excluded from the Light Industrial District",
+    "Any other manufacturing"
+   ],
+   "by_permit": [
+    "Public garages and gasoline service stations (Board of Supervisors)"
+   ],
+   "form_rules": [],
+   "summary": "Retail, offices and general business plus all residential uses. Manufacturing barred except on upper floors or incidental to a shop on the premises.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#d95876"
+  },
+  {
+   "code": "LI",
+   "family": "Industrial",
+   "name": "Light Industrial District",
+   "map_symbol": "cross-hatching (diamond lattice)",
+   "section": 6,
+   "rank": 4,
+   "permitted_uses": [
+    "All Commercial uses",
+    "Manufacturing and industry not listed as excluded"
+   ],
+   "excluded_uses": [
+    "Acetylene gas manufacture",
+    "Ammonia, chlorine or bleach powder manufacture",
+    "Asphalt manufacturing or refining",
+    "Blast furnace",
+    "Boiler works",
+    "Brick, tile or terra cotta manufacture",
+    "Celluloid manufacture or treatment",
+    "Creosote treatment or manufacture",
+    "Coke ovens",
+    "Dyestuff manufacture",
+    "Gas manufacturing",
+    "Gunpowder manufacture or storage",
+    "Lamp black manufacture",
+    "Lime, cement or plaster of paris manufacture",
+    "Petroleum refining",
+    "Potash refining",
+    "Rolling mill",
+    "Ship yard",
+    "Smelting of iron",
+    "Stockyards",
+    "Storage or baling of scrap, paper, rags or junk",
+    "Sulphuric, nitric or hydrochloric acid manufacture",
+    "Tar distillation or manufacture",
+    "Tar roofing or tar waterproofing manufacture",
+    "Wool pulling and scouring",
+    "Yeast plant",
+    "Uses that are a nuisance by emission of odor, dust, smoke, gas or noise",
+    "All uses excluded from Heavy Industrial Districts, except single dwellings, flats and tenement houses"
+   ],
+   "by_permit": [
+    "Iron, steel or brass foundries operating closed furnaces (Board of Supervisors)"
+   ],
+   "form_rules": [],
+   "summary": "Commercial uses plus most manufacturing. Bars 26 named heavy or noxious industries (refining, smelting, shipyards, gas and chemical works) and nuisance uses.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#7b94d4"
+  },
+  {
+   "code": "HI",
+   "family": "Industrial",
+   "name": "Heavy Industrial District",
+   "map_symbol": "square grid",
+   "section": 7,
+   "rank": 5,
+   "permitted_uses": [
+    "All industrial and commercial uses not listed as excluded",
+    "Dwelling quarters for an industrial watchman's family"
+   ],
+   "excluded_uses": [
+    "Single dwelling, flat or tenement house",
+    "Abattoir",
+    "Candle factory",
+    "Distillation of coal, bones or wood",
+    "Fat rendering",
+    "Fertilizer manufacture",
+    "Glue, size or gelatin manufacture",
+    "Incineration or reduction of garbage, offal, dead animals or refuse",
+    "Tallow, grease or lard manufacture"
+   ],
+   "by_permit": [],
+   "form_rules": [],
+   "summary": "Heavy industry including refining, shipyards and smelting. Housing barred except a watchman's quarters; slaughtering, rendering and garbage reduction also barred.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": 0,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#4e3a94"
+  },
+  {
+   "code": "U",
+   "family": "Unrestricted",
+   "name": "Unrestricted District",
+   "map_symbol": "checkerboard",
+   "section": 8,
+   "rank": 6,
+   "permitted_uses": [
+    "Any use, subject only to other laws and ordinances"
+   ],
+   "excluded_uses": [],
+   "by_permit": [],
+   "form_rules": [],
+   "summary": "No use restrictions beyond other laws: the only district allowing abattoirs, rendering, fertilizer and garbage reduction.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#7a5a43"
+  }
+ ],
+ "form_fields": {
+  "min_lot_sqft": "Minimum lot area for new lots (sq ft)",
+  "lot_sqft_per_unit": "Lot area required per dwelling unit (sq ft); in C districts it follows the nearest R district",
+  "max_units_per_lot": "Dwelling units allowed per lot (0 = no housing)",
+  "max_coverage_interior": "Maximum lot coverage, interior lot",
+  "max_coverage_corner": "Maximum lot coverage, corner lot",
+  "height_limit_ft": "Height limit for dwellings (ft); null where FAR governs",
+  "max_far": "Maximum floor area ratio",
+  "rear_yard_ft": "Required rear yard (ft)",
+  "parking_per_unit": "Parking spaces per dwelling unit"
+ },
+ "blank_code": "R2",
+ "frame_rule": "strongest"
+}

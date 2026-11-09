@@ -1,0 +1,1310 @@
+{
+ "city": "San Francisco",
+ "year": 2026,
+ "as_of": "November 9, 2026",
+ "no_scan": true,
+ "ordinance": "San Francisco Planning Code, city zoning data as of November 9, 2026",
+ "map_title": "Zoning Map - Zoning Districts, San Francisco Planning Department, DataSF copy of November 9, 2026",
+ "source_url": "https://data.sf.gov/d/3i4a-hu95",
+ "official_map_url": "https://experience.arcgis.com/experience/573d02b43b7b46e381df04b7f225da95",
+ "structure": "77 district codes in five groups: residential, mixed use, commercial, industrial and public.",
+ "hierarchy": "Height limits and special use districts are separate layers of the city's zoning map and are not shown here.",
+ "method": "The city's district polygons are cut by today's assessor blocks. Parks and federal land are shown without a district, as in the other years.",
+ "zones": [
+  {
+   "code": "RH-1(D)",
+   "name": "Residential: House, One Family: Detached",
+   "family": "Residential",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077",
+   "summary": "House district, named for the number of families.",
+   "color": "#f2e38a"
+  },
+  {
+   "code": "RH-1(S)",
+   "name": "Residential: House, One Family: Secondary Unit",
+   "family": "Residential",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077",
+   "summary": "House district, named for the number of families.",
+   "color": "#e9e186"
+  },
+  {
+   "code": "RH-1",
+   "name": "Residential: House, One Family",
+   "family": "Residential",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077",
+   "summary": "House district, named for the number of families.",
+   "color": "#e1de82"
+  },
+  {
+   "code": "RH-2",
+   "name": "Residential: House, Two Family",
+   "family": "Residential",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077",
+   "summary": "House district, named for the number of families.",
+   "color": "#d8dc7f"
+  },
+  {
+   "code": "RH-3",
+   "name": "Residential: House, Three Family",
+   "family": "Residential",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077",
+   "summary": "House district, named for the number of families.",
+   "color": "#d0da7b"
+  },
+  {
+   "code": "RM-1",
+   "name": "Residential: Mixed, Low Density",
+   "family": "Residential",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337",
+   "summary": "Mixed residential district of houses and apartments, named for its density.",
+   "color": "#c7d777"
+  },
+  {
+   "code": "RM-2",
+   "name": "Residential: Mixed, Moderate Density",
+   "family": "Residential",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337",
+   "summary": "Mixed residential district of houses and apartments, named for its density.",
+   "color": "#bed573"
+  },
+  {
+   "code": "RM-3",
+   "name": "Residential: Mixed, Medium Density",
+   "family": "Residential",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337",
+   "summary": "Mixed residential district of houses and apartments, named for its density.",
+   "color": "#b6d370"
+  },
+  {
+   "code": "RM-4",
+   "name": "Residential: Mixed, High Density",
+   "family": "Residential",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337",
+   "summary": "Mixed residential district of houses and apartments, named for its density.",
+   "color": "#add06c"
+  },
+  {
+   "code": "RTO-M",
+   "name": "Residential Transit Oriented: Mission",
+   "family": "Residential",
+   "section": "209.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20086",
+   "summary": "Residential district oriented to transit.",
+   "color": "#a2ca67"
+  },
+  {
+   "code": "RTO-1",
+   "name": "Residential Transit Oriented District - 1",
+   "family": "Residential",
+   "section": "209.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20086",
+   "summary": "Residential district oriented to transit.",
+   "color": "#93c062"
+  },
+  {
+   "code": "PM-R",
+   "name": "Parkmerced-Residential",
+   "family": "Residential",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612",
+   "summary": "District created for one area: Parkmerced-Residential.",
+   "color": "#85b65c"
+  },
+  {
+   "code": "RED",
+   "name": "Residential Enclave",
+   "family": "Residential",
+   "section": "813",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67758",
+   "summary": "Residential enclave in the South of Market area.",
+   "color": "#77ac56"
+  },
+  {
+   "code": "RH DTR",
+   "name": "Rincon Hill Downtown Residential",
+   "family": "Residential",
+   "section": "827",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26847",
+   "summary": "Downtown residential district for one plan area.",
+   "color": "#68a251"
+  },
+  {
+   "code": "SB-DTR",
+   "name": "South Beach Downtown Residential",
+   "family": "Residential",
+   "section": "829",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26925",
+   "summary": "Downtown residential district for one plan area.",
+   "color": "#5a984b"
+  },
+  {
+   "code": "TB DTR",
+   "name": "Transbay Downtown Residential",
+   "family": "Residential",
+   "section": "828",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26921",
+   "summary": "Downtown residential district for one plan area.",
+   "color": "#4c8e45"
+  },
+  {
+   "code": "TI-R",
+   "name": "Treasure Island Residential",
+   "family": "Residential",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Treasure Island Residential.",
+   "color": "#3d8440"
+  },
+  {
+   "code": "YBI-R",
+   "name": "Yerba Buena Island Residential",
+   "family": "Residential",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Yerba Buena Island Residential.",
+   "color": "#2f7a3a"
+  },
+  {
+   "code": "BR-MU",
+   "name": "Balboa Reservoir - Mixed Use",
+   "family": "Mixed Use",
+   "section": "263.35",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-64188",
+   "summary": "District created for one area: Balboa Reservoir - Mixed Use.",
+   "color": "#fbd9a5"
+  },
+  {
+   "code": "CMUO",
+   "name": "Central Soma-Mixed Use Office",
+   "family": "Mixed Use",
+   "section": null,
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67565",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#fad59f"
+  },
+  {
+   "code": "CRNC",
+   "name": "Chinatown: Residential: Neighborhood Commercial",
+   "family": "Mixed Use",
+   "section": "812.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26729",
+   "summary": "Chinatown district.",
+   "color": "#f9d199"
+  },
+  {
+   "code": "HP-RA",
+   "name": "Hunters Point Redevelopment Plan",
+   "family": "Mixed Use",
+   "section": null,
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Hunters Point Redevelopment Plan.",
+   "color": "#f9cd93"
+  },
+  {
+   "code": "MB-RA",
+   "name": "Mission Bay Redevelopment",
+   "family": "Mixed Use",
+   "section": "902",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-27365#rid-0-0-0-27374",
+   "summary": "District created for one area: Mission Bay Redevelopment.",
+   "color": "#f8c98e"
+  },
+  {
+   "code": "MR-MU",
+   "name": "Mission Rock Mixed Use",
+   "family": "Mixed Use",
+   "section": "249.80",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-58323",
+   "summary": "District created for one area: Mission Rock Mixed Use.",
+   "color": "#f7c588"
+  },
+  {
+   "code": "MUG",
+   "name": "Mixed Use-General",
+   "family": "Mixed Use",
+   "section": "840",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67718",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#f6c182"
+  },
+  {
+   "code": "MUO",
+   "name": "Mixed Use-Office",
+   "family": "Mixed Use",
+   "section": "842",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67732",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#f6bd7c"
+  },
+  {
+   "code": "MUR",
+   "name": "Mixed Use-Residential",
+   "family": "Mixed Use",
+   "section": "842",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67745",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#f5b876"
+  },
+  {
+   "code": "NC-1",
+   "name": "Neighborhood Commercial, Cluster",
+   "family": "Mixed Use",
+   "section": "710.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25492",
+   "summary": "Neighborhood commercial district.",
+   "color": "#f4b470"
+  },
+  {
+   "code": "NC-2",
+   "name": "Neighborhood Commercial, Small Scale",
+   "family": "Mixed Use",
+   "section": "711.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25507",
+   "summary": "Neighborhood commercial district.",
+   "color": "#f3b06a"
+  },
+  {
+   "code": "NC-3",
+   "name": "Neighborhood Commercial, Moderate Scale",
+   "family": "Mixed Use",
+   "section": "712.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25522",
+   "summary": "Neighborhood commercial district.",
+   "color": "#f2ac64"
+  },
+  {
+   "code": "NC-S",
+   "name": "Neighborhood Commercial, Shopping Center",
+   "family": "Mixed Use",
+   "section": "713.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25536",
+   "summary": "Neighborhood commercial district.",
+   "color": "#f2a85f"
+  },
+  {
+   "code": "NCD",
+   "name": "Named Neighborhood Commercial District",
+   "family": "Mixed Use",
+   "section": null,
+   "url": null,
+   "summary": "One named neighborhood commercial street or area; each has its own Planning Code section.",
+   "color": "#f1a459"
+  },
+  {
+   "code": "NCT",
+   "name": "Named Neighborhood Commercial Transit District",
+   "family": "Mixed Use",
+   "section": null,
+   "url": null,
+   "summary": "One named transit-oriented neighborhood commercial street or area; each has its own Planning Code section.",
+   "color": "#f0a053"
+  },
+  {
+   "code": "NCT-1",
+   "name": "Neighborhood Commercial Transit 1",
+   "family": "Mixed Use",
+   "section": "750",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57016",
+   "summary": "Transit-oriented neighborhood commercial district.",
+   "color": "#ef9c4d"
+  },
+  {
+   "code": "NCT-2",
+   "name": "Neighborhood Commercial Transit-2",
+   "family": "Mixed Use",
+   "section": "751",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57028",
+   "summary": "Transit-oriented neighborhood commercial district.",
+   "color": "#ec9748"
+  },
+  {
+   "code": "NCT-3",
+   "name": "Moderate Scale Neighborhood Commercial Transit District",
+   "family": "Mixed Use",
+   "section": "752",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57664",
+   "summary": "Transit-oriented neighborhood commercial district.",
+   "color": "#e79245"
+  },
+  {
+   "code": "P70-MU",
+   "name": "Pier 70 Mixed Use",
+   "family": "Mixed Use",
+   "section": "249.79",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-57782",
+   "summary": "District created for one area: Pier 70 Mixed Use.",
+   "color": "#e28d42"
+  },
+  {
+   "code": "PM-MU1",
+   "name": "Parkmerced-Mixed Use-Social Heart",
+   "family": "Mixed Use",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612",
+   "summary": "District created for one area: Parkmerced-Mixed Use-Social Heart.",
+   "color": "#dc883e"
+  },
+  {
+   "code": "PM-MU2",
+   "name": "Parkmerced-Mixed Use-Neighborhood Commons",
+   "family": "Mixed Use",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612",
+   "summary": "District created for one area: Parkmerced-Mixed Use-Neighborhood Commons.",
+   "color": "#d7833b"
+  },
+  {
+   "code": "PPS-MU",
+   "name": "Potrero Power Station Mixed Use",
+   "family": "Mixed Use",
+   "section": "249.87",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-62911",
+   "summary": "District created for one area: Potrero Power Station Mixed Use.",
+   "color": "#d27e38"
+  },
+  {
+   "code": "RC-3",
+   "name": "Residential: Commercial, Medium Density",
+   "family": "Mixed Use",
+   "section": "209.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20083",
+   "summary": "Residential and commercial mix, named for its density.",
+   "color": "#cc7834"
+  },
+  {
+   "code": "RC-4",
+   "name": "Residential: Commercial, High Density",
+   "family": "Mixed Use",
+   "section": "209.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20083",
+   "summary": "Residential and commercial mix, named for its density.",
+   "color": "#c77331"
+  },
+  {
+   "code": "RED-MX",
+   "name": "Residential Enclave-Mixed",
+   "family": "Mixed Use",
+   "section": "847",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67772",
+   "summary": "Residential enclave in the South of Market area.",
+   "color": "#c16e2d"
+  },
+  {
+   "code": "S-MU",
+   "name": "Stonestown Mixed-Use District",
+   "family": "Mixed Use",
+   "section": "249.9",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-70209",
+   "summary": "District created for one area: Stonestown Mixed-Use District.",
+   "color": "#bc692a"
+  },
+  {
+   "code": "SPD",
+   "name": "Soma: South Park",
+   "family": "Mixed Use",
+   "section": "814",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67797",
+   "summary": "District created for one area: Soma: South Park.",
+   "color": "#b76427"
+  },
+  {
+   "code": "TI-MU",
+   "name": "Treasure Island Mixed Use",
+   "family": "Mixed Use",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Treasure Island Mixed Use.",
+   "color": "#b15f23"
+  },
+  {
+   "code": "UMU",
+   "name": "Urban Mixed Use",
+   "family": "Mixed Use",
+   "section": "843",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67810",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#ac5920"
+  },
+  {
+   "code": "WMUG",
+   "name": "WSoMa Mixed Use-General",
+   "family": "Mixed Use",
+   "section": "844",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-70715",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#a7541d"
+  },
+  {
+   "code": "WMUO",
+   "name": "WSoMa Mixed Use-Office",
+   "family": "Mixed Use",
+   "section": "845",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67836",
+   "summary": "Mixed-use district from the eastern neighborhoods and South of Market plans.",
+   "color": "#a14f19"
+  },
+  {
+   "code": "YBI-MU",
+   "name": "Yerba Buena Island Mixed Use",
+   "family": "Mixed Use",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Yerba Buena Island Mixed Use.",
+   "color": "#9c4a16"
+  },
+  {
+   "code": "C-2",
+   "name": "Community Business",
+   "family": "Commercial",
+   "section": "210.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20117",
+   "summary": "Community business district.",
+   "color": "#f6bccb"
+  },
+  {
+   "code": "C-3-G",
+   "name": "Downtown: General",
+   "family": "Commercial",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120",
+   "summary": "Downtown commercial subdistrict.",
+   "color": "#f2aabc"
+  },
+  {
+   "code": "C-3-O",
+   "name": "Downtown: Office",
+   "family": "Commercial",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120",
+   "summary": "Downtown commercial subdistrict.",
+   "color": "#ed97ac"
+  },
+  {
+   "code": "C-3-O(SD)",
+   "name": "Downtown: Office (Special Development)",
+   "family": "Commercial",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120",
+   "summary": "Downtown commercial subdistrict.",
+   "color": "#e9859d"
+  },
+  {
+   "code": "C-3-R",
+   "name": "Downtown: Retail",
+   "family": "Commercial",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120",
+   "summary": "Downtown commercial subdistrict.",
+   "color": "#e4728d"
+  },
+  {
+   "code": "C-3-S",
+   "name": "Downtown Support",
+   "family": "Commercial",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120",
+   "summary": "Downtown commercial subdistrict.",
+   "color": "#e0607e"
+  },
+  {
+   "code": "CCB",
+   "name": "Chinatown-Community Business",
+   "family": "Commercial",
+   "section": "810.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26704",
+   "summary": "Chinatown district.",
+   "color": "#d1516e"
+  },
+  {
+   "code": "CVR",
+   "name": "Chinatown: Visitor Retail",
+   "family": "Commercial",
+   "section": "811.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26717",
+   "summary": "Chinatown district.",
+   "color": "#c3425e"
+  },
+  {
+   "code": "MB-O",
+   "name": "Mission Bay Office District",
+   "family": "Commercial",
+   "section": "912",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-27365#rid-0-0-0-27434",
+   "summary": "District created for one area: Mission Bay Office District.",
+   "color": "#b4324f"
+  },
+  {
+   "code": "RCD",
+   "name": "Regional Commercial",
+   "family": "Commercial",
+   "section": "758",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57126",
+   "summary": "District created for one area: Regional Commercial.",
+   "color": "#a6233f"
+  },
+  {
+   "code": "RTO-C",
+   "name": "Residential Transit Oriented District - C",
+   "family": "Commercial",
+   "section": null,
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-20086",
+   "summary": "Residential district oriented to transit.",
+   "color": "#97142f"
+  },
+  {
+   "code": "M-1",
+   "name": "Light Industrial",
+   "family": "Industrial",
+   "section": "210.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20132",
+   "summary": "Industrial district.",
+   "color": "#a9c6ec"
+  },
+  {
+   "code": "M-2",
+   "name": "Heavy Industrial",
+   "family": "Industrial",
+   "section": "210.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20132",
+   "summary": "Industrial district.",
+   "color": "#90aadf"
+  },
+  {
+   "code": "PDR-1-B",
+   "name": "PDR Light Industrial Buffer",
+   "family": "Industrial",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123",
+   "summary": "Production, distribution and repair district.",
+   "color": "#768ed1"
+  },
+  {
+   "code": "PDR-1-D",
+   "name": "Production, Distribution & Repair - 1 - Design",
+   "family": "Industrial",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123",
+   "summary": "Production, distribution and repair district.",
+   "color": "#5d72c4"
+  },
+  {
+   "code": "PDR-1-G",
+   "name": "Production, Distribution & Repair - 1 - General",
+   "family": "Industrial",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123",
+   "summary": "Production, distribution and repair district.",
+   "color": "#5657ad"
+  },
+  {
+   "code": "PDR-2",
+   "name": "PDR Production, Distribution, And Repair",
+   "family": "Industrial",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123",
+   "summary": "Production, distribution and repair district.",
+   "color": "#4e3d96"
+  },
+  {
+   "code": "SALI",
+   "name": "Service/Arts/Light Industrial",
+   "family": "Industrial",
+   "section": "846",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67785",
+   "summary": "Service, arts and light industrial district.",
+   "color": "#47227f"
+  },
+  {
+   "code": "Job Corps",
+   "name": "Job Corps",
+   "family": "Public",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Job Corps.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "P",
+   "name": "Public",
+   "family": "Public",
+   "section": "211",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-50175",
+   "summary": "Public district: land held for public use.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "PM-CF",
+   "name": "Parkmerced-Community/Fitness",
+   "family": "Public",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612",
+   "summary": "District created for one area: Parkmerced-Community/Fitness.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "PM-OS",
+   "name": "Parkmerced-Open Space",
+   "family": "Public",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612",
+   "summary": "District created for one area: Parkmerced-Open Space.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "PM-S",
+   "name": "Parkmerced-School",
+   "family": "Public",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612",
+   "summary": "District created for one area: Parkmerced-School.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "TI-OS",
+   "name": "Treasure Island Open Space",
+   "family": "Public",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Treasure Island Open Space.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "TI-PCI",
+   "name": "Treasure Island Public/Civic/Institutional",
+   "family": "Public",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Treasure Island Public/Civic/Institutional.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "YBI-OS",
+   "name": "Yerba Buena Island Open Space",
+   "family": "Public",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Yerba Buena Island Open Space.",
+   "color": "#8e9aa3"
+  },
+  {
+   "code": "YBI-PCI",
+   "name": "Yerba Buena Island Public/Civic/Institutional",
+   "family": "Public",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366",
+   "summary": "District created for one area: Yerba Buena Island Public/Civic/Institutional.",
+   "color": "#8e9aa3"
+  }
+ ],
+ "districts": {
+  "24TH STREET- NOE VALLEY NEIGHBORHOOD COMMERCIAL": {
+   "name": "24th Street: Noe Valley Neighborhood Commercial",
+   "section": "728.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25723"
+  },
+  "24TH-MISSION NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "24Th-Mission Neighborhood Commercial Transit",
+   "section": "763",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57188"
+  },
+  "BALBOA RESERVOIR - MIXED USE": {
+   "name": "Balboa Reservoir - Mixed Use",
+   "section": "263.35",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-64188"
+  },
+  "BAYVIEW NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Bayview Neighborhood Commercial District",
+   "section": "737",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62678"
+  },
+  "BROADWAY NEIGHBORHOOD COMMERCIAL": {
+   "name": "Broadway Neighborhood Commercial",
+   "section": "714.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25549"
+  },
+  "CASTRO STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Castro Street Neighborhood Commercial",
+   "section": "715.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25562"
+  },
+  "CENTRAL SOMA-MIXED USE OFFICE": {
+   "name": "Central Soma-Mixed Use Office",
+   "section": null,
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67565"
+  },
+  "CHINATOWN- RESIDENTIAL- NEIGHBORHOOD COMMERCIAL": {
+   "name": "Chinatown: Residential: Neighborhood Commercial",
+   "section": "812.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26729"
+  },
+  "CHINATOWN- VISITOR RETAIL": {
+   "name": "Chinatown: Visitor Retail",
+   "section": "811.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26717"
+  },
+  "CHINATOWN-COMMUNITY BUSINESS": {
+   "name": "Chinatown-Community Business",
+   "section": "810.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26704"
+  },
+  "COLE VALLEY NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Cole Valley Neighborhood Commercial District",
+   "section": "742",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62751"
+  },
+  "COMMUNITY BUSINESS": {
+   "name": "Community Business",
+   "section": "210.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20117"
+  },
+  "CORTLAND AVENUE NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Cortland Avenue Neighborhood Commercial District",
+   "section": "738",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62691"
+  },
+  "DIVISADERO STREET NEIGHBORHOOD COMMERCIAL TRANSIT DISTRICT": {
+   "name": "Divisadero Street Neighborhood Commercial Transit District",
+   "section": "759",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57141"
+  },
+  "DOWNTOWN SUPPORT": {
+   "name": "Downtown Support",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120"
+  },
+  "DOWNTOWN- GENERAL": {
+   "name": "Downtown: General",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120"
+  },
+  "DOWNTOWN- OFFICE": {
+   "name": "Downtown: Office",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120"
+  },
+  "DOWNTOWN- OFFICE (SPECIAL DEVELOPMENT)": {
+   "name": "Downtown: Office (Special Development)",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120"
+  },
+  "DOWNTOWN- RETAIL": {
+   "name": "Downtown: Retail",
+   "section": "210.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20120"
+  },
+  "EXCELSIOR OUTER MISSION STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Excelsior Outer Mission Street Neighborhood Commercial District",
+   "section": "720",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25623"
+  },
+  "FILLMORE STREET NEIGHBORHOOD COMMERCIAL TRANSIT DISTRICT": {
+   "name": "Fillmore Street Neighborhood Commercial Transit District",
+   "section": "760",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57154"
+  },
+  "FOLSOM STREET NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "Folsom Street Neighborhood Commercial Transit",
+   "section": "757",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57112"
+  },
+  "GEARY BOULEVARD NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Geary Boulevard Neighborhood Commercial District",
+   "section": "739",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62706"
+  },
+  "GLEN PARK NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "Glen Park Neighborhood Commercial Transit",
+   "section": "756",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57666"
+  },
+  "HAIGHT STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Haight Street Neighborhood Commercial",
+   "section": "719.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25610"
+  },
+  "HAYES NCT": {
+   "name": "Hayes NCT",
+   "section": "761",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57167"
+  },
+  "HEAVY INDUSTRIAL": {
+   "name": "Heavy Industrial",
+   "section": "210.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20132"
+  },
+  "INNER BALBOA STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Inner Balboa Street Neighborhood Commercial District",
+   "section": "735",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62651"
+  },
+  "INNER CLEMENT STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Inner Clement Street Neighborhood Commercial",
+   "section": "716.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25576"
+  },
+  "INNER SUNSET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Inner Sunset Neighborhood Commercial",
+   "section": "730.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25749"
+  },
+  "INNER TARAVAL STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Inner Taraval Street Neighborhood Commercial District",
+   "section": "745",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62795"
+  },
+  "IRVING STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Irving Street Neighborhood Commercial District",
+   "section": "732",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25777"
+  },
+  "JAPANTOWN NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Japantown Neighborhood Commercial District",
+   "section": "721",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57663"
+  },
+  "JOB CORPS": {
+   "name": "Job Corps",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "JUDAH STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Judah Street Neighborhood Commercial District",
+   "section": "734",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25819"
+  },
+  "LAKESIDE VILLAGE NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Lakeside Village Neighborhood Commercial District",
+   "section": "727",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25711"
+  },
+  "LELAND AVENUE NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Leland Avenue Neighborhood Commercial District",
+   "section": "746",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-62810"
+  },
+  "LIGHT INDUSTRIAL": {
+   "name": "Light Industrial",
+   "section": "210.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20132"
+  },
+  "LOWER HAIGHT STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Lower Haight Street Neighborhood Commercial District",
+   "section": "743",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62764"
+  },
+  "LOWER POLK STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Lower Polk Street Neighborhood Commercial District",
+   "section": "744",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62779"
+  },
+  "MISSION BAY OFFICE DISTRICT": {
+   "name": "Mission Bay Office District",
+   "section": "912",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-27365#rid-0-0-0-27434"
+  },
+  "MISSION BAY REDEVELOPMENT": {
+   "name": "Mission Bay Redevelopment",
+   "section": "902",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-27365#rid-0-0-0-27374"
+  },
+  "MISSION BERNAL NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Mission Bernal Neighborhood Commercial District",
+   "section": "740",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62721"
+  },
+  "MISSION ROCK MIXED USE": {
+   "name": "Mission Rock Mixed Use",
+   "section": "249.80",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-58323"
+  },
+  "MISSION STREET NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "Mission Street Neighborhood Commercial Transit",
+   "section": "754",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57068"
+  },
+  "MIXED USE-GENERAL": {
+   "name": "Mixed Use-General",
+   "section": "840",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67718"
+  },
+  "MIXED USE-OFFICE": {
+   "name": "Mixed Use-Office",
+   "section": "842",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67732"
+  },
+  "MIXED USE-RESIDENTIAL": {
+   "name": "Mixed Use-Residential",
+   "section": "841",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67745"
+  },
+  "MODERATE SCALE NEIGHBORHOOD COMMERCIAL TRANSIT DISTRICT": {
+   "name": "Moderate Scale Neighborhood Commercial Transit District",
+   "section": "752",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57664"
+  },
+  "NEIGHBORHOOD COMMERCIAL TRANSIT 1": {
+   "name": "Neighborhood Commercial Transit 1",
+   "section": "750",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57016"
+  },
+  "NEIGHBORHOOD COMMERCIAL TRANSIT-2": {
+   "name": "Neighborhood Commercial Transit-2",
+   "section": "751",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57028"
+  },
+  "NEIGHBORHOOD COMMERCIAL, CLUSTER": {
+   "name": "Neighborhood Commercial, Cluster",
+   "section": "710.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25492"
+  },
+  "NEIGHBORHOOD COMMERCIAL, MODERATE SCALE": {
+   "name": "Neighborhood Commercial, Moderate Scale",
+   "section": "712.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25522"
+  },
+  "NEIGHBORHOOD COMMERCIAL, SHOPPING CENTER": {
+   "name": "Neighborhood Commercial, Shopping Center",
+   "section": "713.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25536"
+  },
+  "NEIGHBORHOOD COMMERCIAL, SMALL SCALE": {
+   "name": "Neighborhood Commercial, Small Scale",
+   "section": "711.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25507"
+  },
+  "NORIEGA STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Noriega Street Neighborhood Commercial District",
+   "section": "731",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25761"
+  },
+  "NORTH BEACH NEIGHBORHOOD COMMERCIAL": {
+   "name": "North Beach Neighborhood Commercial",
+   "section": "722.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-66848"
+  },
+  "OCEAN AVENUE NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "Ocean Avenue Neighborhood Commercial Transit",
+   "section": "755",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57081"
+  },
+  "OUTER BALBOA STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Outer Balboa Street Neighborhood Commercial District",
+   "section": "736",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62664"
+  },
+  "OUTER CLEMENT STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Outer Clement Street Neighborhood Commercial",
+   "section": "717.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25588"
+  },
+  "PACIFIC AVENUE NEIGHBORHOOD COMMERCIAL": {
+   "name": "Pacific Avenue Neighborhood Commercial",
+   "section": "726",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25699"
+  },
+  "PARKMERCED-COMMUNITY/FITNESS": {
+   "name": "Parkmerced-Community/Fitness",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612"
+  },
+  "PARKMERCED-MIXED USE-NEIGHBORHOOD COMMONS": {
+   "name": "Parkmerced-Mixed Use-Neighborhood Commons",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612"
+  },
+  "PARKMERCED-MIXED USE-SOCIAL HEART": {
+   "name": "Parkmerced-Mixed Use-Social Heart",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612"
+  },
+  "PARKMERCED-OPEN SPACE": {
+   "name": "Parkmerced-Open Space",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612"
+  },
+  "PARKMERCED-RESIDENTIAL": {
+   "name": "Parkmerced-Residential",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612"
+  },
+  "PARKMERCED-SCHOOL": {
+   "name": "Parkmerced-School",
+   "section": "249.64",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-34612"
+  },
+  "PDR LIGHT INDUSTRIAL BUFFER": {
+   "name": "PDR Light Industrial Buffer",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123"
+  },
+  "PDR PRODUCTION, DISTRIBUTION, AND REPAIR": {
+   "name": "PDR Production, Distribution, And Repair",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123"
+  },
+  "PIER 70 MIXED USE": {
+   "name": "Pier 70 Mixed Use",
+   "section": "249.79",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-57782"
+  },
+  "POLK STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Polk Street Neighborhood Commercial",
+   "section": "723.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25662"
+  },
+  "POTRERO POWER STATION MIXED USE": {
+   "name": "Potrero Power Station Mixed Use",
+   "section": "249.87",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-62911"
+  },
+  "PRODUCTION, DISTRIBUTION & REPAIR - 1 - DESIGN": {
+   "name": "Production, Distribution & Repair - 1 - Design",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123"
+  },
+  "PRODUCTION, DISTRIBUTION & REPAIR - 1 - GENERAL": {
+   "name": "Production, Distribution & Repair - 1 - General",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20123"
+  },
+  "PUBLIC": {
+   "name": "Public",
+   "section": "210.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-50175"
+  },
+  "REGIONAL COMMERCIAL": {
+   "name": "Regional Commercial",
+   "section": "758",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57126"
+  },
+  "RESIDENTIAL ENCLAVE": {
+   "name": "Residential Enclave",
+   "section": "813",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67758"
+  },
+  "RESIDENTIAL ENCLAVE-MIXED": {
+   "name": "Residential Enclave-Mixed",
+   "section": "813",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67772"
+  },
+  "RESIDENTIAL TRANSIT ORIENTED DISTRICT": {
+   "name": "Residential Transit Oriented District",
+   "section": "209.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20086"
+  },
+  "RESIDENTIAL TRANSIT ORIENTED DISTRICT - 1": {
+   "name": "Residential Transit Oriented District - 1",
+   "section": "209.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20086"
+  },
+  "RESIDENTIAL TRANSIT ORIENTED DISTRICT - C": {
+   "name": "Residential Transit Oriented District - C",
+   "section": null,
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-20086"
+  },
+  "RESIDENTIAL TRANSIT ORIENTED- MISSION": {
+   "name": "Residential Transit Oriented: Mission",
+   "section": "209.4",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20086"
+  },
+  "RESIDENTIAL- COMMERCIAL, HIGH DENSITY": {
+   "name": "Residential: Commercial, High Density",
+   "section": "209.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20083"
+  },
+  "RESIDENTIAL- COMMERCIAL, MEDIUM DENSITY": {
+   "name": "Residential: Commercial, Medium Density",
+   "section": "209.3",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20083"
+  },
+  "RESIDENTIAL- HOUSE, ONE FAMILY": {
+   "name": "Residential: House, One Family",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077"
+  },
+  "RESIDENTIAL- HOUSE, ONE FAMILY- DETACHED": {
+   "name": "Residential: House, One Family: Detached",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077"
+  },
+  "RESIDENTIAL- HOUSE, ONE FAMILY- SECONDARY UNIT": {
+   "name": "Residential: House, One Family: Secondary Unit",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077"
+  },
+  "RESIDENTIAL- HOUSE, THREE FAMILY": {
+   "name": "Residential: House, Three Family",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077"
+  },
+  "RESIDENTIAL- HOUSE, TWO FAMILY": {
+   "name": "Residential: House, Two Family",
+   "section": "209.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-20077"
+  },
+  "RESIDENTIAL- MIXED, HIGH DENSITY": {
+   "name": "Residential: Mixed, High Density",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337"
+  },
+  "RESIDENTIAL- MIXED, LOW DENSITY": {
+   "name": "Residential: Mixed, Low Density",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337"
+  },
+  "RESIDENTIAL- MIXED, MEDIUM DENSITY": {
+   "name": "Residential: Mixed, Medium Density",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337"
+  },
+  "RESIDENTIAL- MIXED, MODERATE DENSITY": {
+   "name": "Residential: Mixed, Moderate Density",
+   "section": "209.2",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-56337"
+  },
+  "RINCON HILL DOWNTOWN RESIDENTIAL": {
+   "name": "Rincon Hill Downtown Residential",
+   "section": "827",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26847"
+  },
+  "SACRAMENTO STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Sacramento Street Neighborhood Commercial",
+   "section": "724.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25675"
+  },
+  "SAN BRUNO AVENUE NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "San Bruno Avenue Neighborhood Commercial District",
+   "section": "741",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-62736"
+  },
+  "SEE HUNTERS POINT REDEVELOPMENT PLAN": {
+   "name": "Hunters Point Redevelopment Plan",
+   "section": null,
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "SERVICE/ARTS/LIGHT INDUSTRIAL": {
+   "name": "Service/Arts/Light Industrial",
+   "section": "846",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67785"
+  },
+  "SOMA NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "SoMa Neighborhood Commercial Transit",
+   "section": "753",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57665"
+  },
+  "SOMA- SOUTH PARK": {
+   "name": "Soma: South Park",
+   "section": "814",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67797"
+  },
+  "SOUTH BEACH DOWNTOWN RESIDENTIAL": {
+   "name": "South Beach Downtown Residential",
+   "section": "829",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26925"
+  },
+  "STONESTOWN MIXED-USE DISTRICT": {
+   "name": "Stonestown Mixed-Use District",
+   "section": "249.9",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-70209"
+  },
+  "TARAVAL STREET NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Taraval Street Neighborhood Commercial District",
+   "section": "733",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25787"
+  },
+  "TRANSBAY DOWNTOWN RESIDENTIAL": {
+   "name": "Transbay Downtown Residential",
+   "section": "828",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-26489#rid-0-0-0-26921"
+  },
+  "TREASURE ISLAND MIXED USE": {
+   "name": "Treasure Island Mixed Use",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "TREASURE ISLAND OPEN SPACE": {
+   "name": "Treasure Island Open Space",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "TREASURE ISLAND PUBLIC/CIVIC/INSTITUTIONAL": {
+   "name": "Treasure Island Public/Civic/Institutional",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "TREASURE ISLAND RESIDENTIAL": {
+   "name": "Treasure Island Residential",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "UNION STREET NEIGHBORHOOD COMMERCIAL": {
+   "name": "Union Street Neighborhood Commercial",
+   "section": "725.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25687"
+  },
+  "UPPER FILLMORE NEIGHBORHOOD COMMERCIAL DISTRICT": {
+   "name": "Upper Fillmore Neighborhood Commercial District",
+   "section": "718.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25598"
+  },
+  "UPPER MARKET NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "Upper Market Neighborhood Commercial Transit",
+   "section": "764",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57199"
+  },
+  "URBAN MIXED USE": {
+   "name": "Urban Mixed Use",
+   "section": "843",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67810"
+  },
+  "VALENCIA STREET NEIGHBORHOOD COMMERCIAL TRANSIT": {
+   "name": "Valencia Street Neighborhood Commercial Transit",
+   "section": "726.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-57178"
+  },
+  "WEST PORTAL AVENUE NEIGHBORHOOD COMMERCIAL": {
+   "name": "West Portal Avenue Neighborhood Commercial",
+   "section": "729.1",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-25360#rid-0-0-0-25735"
+  },
+  "WSOMA MIXED USE-GENERAL": {
+   "name": "WSoMa Mixed Use-General",
+   "section": "844",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-70715"
+  },
+  "WSOMA MIXED USE-OFFICE": {
+   "name": "WSoMa Mixed Use-Office",
+   "section": "845",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-67836"
+  },
+  "YERBA BUENA ISLAND MIXED USE": {
+   "name": "Yerba Buena Island Mixed Use",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "YERBA BUENA ISLAND OPEN SPACE": {
+   "name": "Yerba Buena Island Open Space",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "YERBA BUENA ISLAND PUBLIC/CIVIC/INSTITUTIONAL": {
+   "name": "Yerba Buena Island Public/Civic/Institutional",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  },
+  "YERBA BUENA ISLAND RESIDENTIAL": {
+   "name": "Yerba Buena Island Residential",
+   "section": "249.52",
+   "url": "https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_planning/0-0-0-19790#rid-0-0-0-21366"
+  }
+ }
+}

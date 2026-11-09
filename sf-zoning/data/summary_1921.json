@@ -1,0 +1,14 @@
+{
+ "year": 1921,
+ "acres": {
+  "C": 1694.0,
+  "HI": 2152.0,
+  "LI": 1171.0,
+  "R1": 5400.0,
+  "R2": 7728.0
+ },
+ "public_acres": 3889,
+ "paper_acres": 0,
+ "paper_water_acres": 0,
+ "has_hatch": true
+}

@@ -1,0 +1,618 @@
+{
+ "city": "San Francisco",
+ "year": 1968,
+ "ordinance": "City Planning Code, Part II, Chapter II, Section 105, effective May 2, 1960, with map amendments to and including October 1, 1968",
+ "map_title": "Zoning Map of the City and County of San Francisco, Sheets 1-13, with special use (1SU, 2SU), special height (1SH, 2SH, 4SH, 5SH, 13SH) and special sign district sheets",
+ "sheet_legend_band": [
+  0.78,
+  0.9
+ ],
+ "source_pdf": "1968/Zoning_1968.pdf",
+ "structure": "Eighteen districts: dwelling (R-1-D to R-5, with R-4-C and R-5-C), commercial (C-1, C-2, four downtown C-3 subdistricts, C-M), industrial (M-1, M-2) and Public (P).",
+ "hierarchy": "Cumulative within the dwelling family: each R district permits the uses of the one before it. C-M and both M districts exclude one- and two-family dwellings; M districts exclude all housing.",
+ "boundary_rule": "Districts are drawn on the 13 map sheets as heavy boundary lines with a printed district label.",
+ "zones": [
+  {
+   "code": "R-1-D",
+   "name": "One-Family Detached Dwelling District",
+   "family": "Residential",
+   "section": "201",
+   "rank": 1,
+   "permitted_uses": [
+    "One-family detached dwelling",
+    "Church",
+    "Non-profit elementary or secondary school"
+   ],
+   "conditional_uses": [
+    "Private school for profit, nursery school, institution of higher learning",
+    "Non-commercial open recreation, community club house, community garage",
+    "Utility installation, planned unit development, greenhouse or nursery (no retail sales)"
+   ],
+   "transitional_uses": [
+    "One-family row house and two-family dwelling on lots adjacent to or facing a C or M district"
+   ],
+   "form_rules": [
+    "Lot size 4,000 sq ft (except lots of record); one dwelling unit per lot",
+    "Coverage: 55% interior lot, 60% corner lot",
+    "Side yards together at least 10 ft, none under 5 ft; rear yard 25 ft (corner lot 20 ft)",
+    "Height: dwellings 35 ft (30-40 ft on sloping lots); institutions 75 ft",
+    "Parking: one space per dwelling unit"
+   ],
+   "summary": "Detached single-family houses on 4,000 sq ft lots with side yards; 35 ft height limit.",
+   "form": {
+    "min_lot_sqft": 4000,
+    "lot_sqft_per_unit": 4000,
+    "max_units_per_lot": 1,
+    "max_coverage_interior": 0.55,
+    "max_coverage_corner": 0.6,
+    "height_limit_ft": 35,
+    "max_far": null,
+    "rear_yard_ft": 25,
+    "parking_per_unit": 1.0
+   },
+   "color": "#f2e38a"
+  },
+  {
+   "code": "R-1",
+   "name": "One-Family Dwelling District",
+   "family": "Residential",
+   "section": "202",
+   "rank": 2,
+   "permitted_uses": [
+    "All R-1-D uses",
+    "One-family row dwelling"
+   ],
+   "conditional_uses": [
+    "Same as R-1-D, plus parking lot and access driveway to a C or M district"
+   ],
+   "transitional_uses": [
+    "Two-family dwelling, professional office for one person, private non-commercial club or lodge, on lots adjacent to or facing a C or M district"
+   ],
+   "form_rules": [
+    "Lot size 2,640 sq ft in new subdivisions, 2,500 sq ft otherwise; one unit per lot or per 3,000 sq ft",
+    "Coverage: 60% interior, 75% corner",
+    "No side yard required (3 ft minimum if provided); rear yard 25 ft (corner 20 ft)",
+    "Height: dwellings 35 ft (30-40 ft on sloping lots)",
+    "Parking: one space per dwelling unit"
+   ],
+   "summary": "Single-family houses, including row houses, on standard 25-foot lots; 35 ft height limit.",
+   "form": {
+    "min_lot_sqft": 2500,
+    "lot_sqft_per_unit": 3000,
+    "max_units_per_lot": 1,
+    "max_coverage_interior": 0.6,
+    "max_coverage_corner": 0.75,
+    "height_limit_ft": 35,
+    "max_far": null,
+    "rear_yard_ft": 25,
+    "parking_per_unit": 1.0
+   },
+   "color": "#dddd81"
+  },
+  {
+   "code": "R-2",
+   "name": "Two-Family Dwelling District",
+   "family": "Residential",
+   "section": "203",
+   "rank": 3,
+   "permitted_uses": [
+    "All R-1 uses",
+    "Two-family dwelling",
+    "Home for the aged (up to six persons)"
+   ],
+   "conditional_uses": [
+    "Same as R-1, plus hospital, sanitarium, rest home (over 6 patients), philanthropic institution"
+   ],
+   "transitional_uses": [
+    "Multiple dwelling, private club or lodge, boarding house, professional office for one person, fraternity, advertising sign, on lots adjacent to or facing a C or M district"
+   ],
+   "form_rules": [
+    "Lot size 2,640 / 2,500 sq ft; one two-family dwelling per lot or 1,500 sq ft per unit",
+    "Coverage: 65% interior, 75% corner",
+    "No side yard required; rear yard 25 ft (corner 15 ft)",
+    "Height: dwellings 40 ft (30-40 ft on sloping lots)",
+    "Parking: one space per dwelling unit"
+   ],
+   "summary": "Duplexes and single-family houses; 1,500 sq ft of lot per unit; 40 ft height limit.",
+   "form": {
+    "min_lot_sqft": 2500,
+    "lot_sqft_per_unit": 1500,
+    "max_units_per_lot": 2,
+    "max_coverage_interior": 0.65,
+    "max_coverage_corner": 0.75,
+    "height_limit_ft": 40,
+    "max_far": null,
+    "rear_yard_ft": 25,
+    "parking_per_unit": 1.0
+   },
+   "color": "#c8d878"
+  },
+  {
+   "code": "R-3",
+   "name": "Low-Density Multiple Dwelling District",
+   "family": "Residential",
+   "section": "204",
+   "rank": 4,
+   "permitted_uses": [
+    "All R-2 uses",
+    "Multiple-family dwelling of not more than 3 stories",
+    "Boarding house",
+    "Fraternity"
+   ],
+   "conditional_uses": [
+    "Same as R-2, plus institutions for contagious disease or addiction treatment on a block or lot of 3+ acres, hotel, private club or lodge"
+   ],
+   "transitional_uses": [
+    "All R-4 principal uses and R-2 transitional uses, on lots adjacent to or facing a C or M district"
+   ],
+   "form_rules": [
+    "Lot size 2,640 / 2,500 sq ft; 400 sq ft of lot per dwelling unit",
+    "Coverage: 70% interior, 75% corner",
+    "No side yard required; rear yard 25 ft (corner 15 ft)",
+    "Height: dwellings 40 ft",
+    "Parking: one per unit; may be within 600 ft of the lot for multiple dwellings"
+   ],
+   "summary": "Walk-up apartments up to three stories; 400 sq ft of lot per unit; 40 ft height limit.",
+   "form": {
+    "min_lot_sqft": 2500,
+    "lot_sqft_per_unit": 400,
+    "max_units_per_lot": null,
+    "max_coverage_interior": 0.7,
+    "max_coverage_corner": 0.75,
+    "height_limit_ft": 40,
+    "max_far": null,
+    "rear_yard_ft": 25,
+    "parking_per_unit": 1.0
+   },
+   "color": "#b3d26f"
+  },
+  {
+   "code": "R-4",
+   "name": "Medium-Density Multiple Dwelling District",
+   "family": "Residential",
+   "section": "205",
+   "rank": 5,
+   "permitted_uses": [
+    "All R-3 uses",
+    "Multiple-story multiple-family dwelling",
+    "Private non-commercial club or lodge"
+   ],
+   "conditional_uses": [
+    "Same as R-3, plus professional offices under specific regulations"
+   ],
+   "transitional_uses": [
+    "Professional office building, restaurant, personal service shop, newsstand, storage garage and some other uses, on lots adjacent to or facing a C or M district"
+   ],
+   "form_rules": [
+    "Lot size 2,640 / 2,500 sq ft; 200 sq ft of lot per dwelling unit",
+    "Coverage: 75% interior, 80% corner",
+    "Rear yard 15 ft (1-3 stories) or 25 ft (4+ stories)",
+    "Floor area ratio 4.8 (corner lots +25% for calculation); no fixed height limit",
+    "Parking: one per unit; one per 8 hotel bedrooms over 20 rooms"
+   ],
+   "summary": "Apartment buildings of any height up to a 4.8 floor area ratio; 200 sq ft of lot per unit.",
+   "form": {
+    "min_lot_sqft": 2500,
+    "lot_sqft_per_unit": 200,
+    "max_units_per_lot": null,
+    "max_coverage_interior": 0.75,
+    "max_coverage_corner": 0.8,
+    "height_limit_ft": null,
+    "max_far": 4.8,
+    "rear_yard_ft": 15,
+    "parking_per_unit": 1.0
+   },
+   "color": "#98c363"
+  },
+  {
+   "code": "R-4-C",
+   "name": "R-4-C District",
+   "family": "Residential",
+   "section": null,
+   "rank": 6,
+   "permitted_uses": [],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [],
+   "summary": "R-4 variant marked C.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#75ab55"
+  },
+  {
+   "code": "R-5",
+   "name": "High-Density Multiple Dwelling District",
+   "family": "Residential",
+   "section": "206",
+   "rank": 7,
+   "permitted_uses": [
+    "All R-4 uses"
+   ],
+   "conditional_uses": [
+    "Same as R-4"
+   ],
+   "transitional_uses": [
+    "As for R-4; multiple dwelling as regulated in R-5 if adjacent to a C-3 district"
+   ],
+   "form_rules": [
+    "Lot size 2,640 / 2,500 sq ft; 125 sq ft of lot per dwelling unit (one-room-and-kitchen apartment counts as 3/4 unit)",
+    "Coverage: 75% interior, 90% corner",
+    "Rear yard 10 ft (1-3 stories) or 20 ft (4+ stories)",
+    "Floor area ratio 10.0; no fixed height limit",
+    "Parking: one per unit"
+   ],
+   "summary": "High-rise apartments and hotels up to a 10.0 floor area ratio; 125 sq ft of lot per unit.",
+   "form": {
+    "min_lot_sqft": 2500,
+    "lot_sqft_per_unit": 125,
+    "max_units_per_lot": null,
+    "max_coverage_interior": 0.75,
+    "max_coverage_corner": 0.9,
+    "height_limit_ft": null,
+    "max_far": 10.0,
+    "rear_yard_ft": 10,
+    "parking_per_unit": 1.0
+   },
+   "color": "#529248"
+  },
+  {
+   "code": "R-5-C",
+   "name": "R-5-C District",
+   "family": "Residential",
+   "section": null,
+   "rank": 8,
+   "permitted_uses": [],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [],
+   "summary": "R-5 variant marked C.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#2f7a3a"
+  },
+  {
+   "code": "C-1",
+   "name": "Neighborhood Shopping District",
+   "family": "Commercial",
+   "section": "207",
+   "rank": 9,
+   "permitted_uses": [
+    "Neighborhood retail business",
+    "Personal service",
+    "Business or professional office",
+    "Motel",
+    "Advertising sign",
+    "Dwellings as in the nearest R district (never fewer units than R-3 allows)"
+   ],
+   "conditional_uses": [
+    "Planned unit development, aircraft landing field, wireless transmission tower, railroad, institutions for contagious disease or addiction treatment"
+   ],
+   "transitional_uses": [],
+   "form_rules": [
+    "No coverage limit except floors used for residence",
+    "Yards only for residential floors, as in the nearest R district",
+    "Floor area ratio 3.6; dwellings no taller than 40 ft next to R-1-D, R-1, R-2 or R-3",
+    "Parking: one per dwelling unit; varies by use above 5,000 sq ft; loading spaces for some uses"
+   ],
+   "summary": "Neighborhood stores, services and offices with apartments above; 3.6 floor area ratio.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 3.6,
+    "rear_yard_ft": null,
+    "parking_per_unit": 1.0
+   },
+   "color": "#f6bccb"
+  },
+  {
+   "code": "C-2",
+   "name": "Community Business District",
+   "family": "Commercial",
+   "section": "208",
+   "rank": 10,
+   "permitted_uses": [
+    "All C-1 uses",
+    "Community retail business and service"
+   ],
+   "conditional_uses": [
+    "Same as C-1, plus animal hospital, mortuary, parcel delivery, minor auto repair (enclosed), auto sales lot, household goods storage"
+   ],
+   "transitional_uses": [],
+   "form_rules": [
+    "No coverage limit except floors used for residence",
+    "Floor area ratio 3.6; dwellings no taller than 40 ft next to R-1-D, R-1, R-2 or R-3",
+    "Parking: as C-1; theatres one space per 8 seats; mortuaries five spaces"
+   ],
+   "summary": "Larger shopping streets and community business; 3.6 floor area ratio.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 3.6,
+    "rear_yard_ft": null,
+    "parking_per_unit": 1.0
+   },
+   "color": "#ef9db1"
+  },
+  {
+   "code": "C-3-S",
+   "name": "Downtown Support District",
+   "family": "Commercial",
+   "section": null,
+   "rank": 11,
+   "permitted_uses": [],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [
+    "FAR 7:1 (unverified)"
+   ],
+   "summary": "Downtown service and support area south of Market.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 7,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#e77f98"
+  },
+  {
+   "code": "C-3-G",
+   "name": "Downtown General Commercial District",
+   "family": "Commercial",
+   "section": null,
+   "rank": 12,
+   "permitted_uses": [],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [
+    "FAR 10:1 (unverified)"
+   ],
+   "summary": "Downtown general commercial.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 10,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#e0607e"
+  },
+  {
+   "code": "C-3-R",
+   "name": "Downtown Retail District",
+   "family": "Commercial",
+   "section": null,
+   "rank": 13,
+   "permitted_uses": [],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [
+    "FAR 10:1 (unverified)"
+   ],
+   "summary": "Downtown retail core.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 10,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#c84764"
+  },
+  {
+   "code": "C-3-O",
+   "name": "Downtown Office District",
+   "family": "Commercial",
+   "section": null,
+   "rank": 14,
+   "permitted_uses": [],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [
+    "FAR 14:1 (unverified)"
+   ],
+   "summary": "Downtown office core.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 14,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#af2d49"
+  },
+  {
+   "code": "C-M",
+   "name": "Heavy Commercial District",
+   "family": "Commercial",
+   "section": "210",
+   "rank": 15,
+   "permitted_uses": [
+    "General commercial",
+    "Wholesale storage",
+    "Mortuary",
+    "Automobile sales lot"
+   ],
+   "excluded_uses": [
+    "One- and two-family dwellings"
+   ],
+   "conditional_uses": [
+    "Same as C-2, plus experimental laboratory and enclosed dairy distribution plant"
+   ],
+   "transitional_uses": [],
+   "form_rules": [
+    "Floor area ratio 9.0",
+    "Parking varies by use; loading spaces required"
+   ],
+   "summary": "Wholesale, storage and service commerce at the edge of downtown; 9.0 floor area ratio; no houses.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 9.0,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#97142f"
+  },
+  {
+   "code": "M-1",
+   "name": "Light Industrial District",
+   "family": "Industrial",
+   "section": "211",
+   "rank": 16,
+   "permitted_uses": [
+    "Light industry and manufacturing"
+   ],
+   "excluded_uses": [
+    "Dwelling, hotel, motel or boarding house"
+   ],
+   "conditional_uses": [
+    "Planned unit development, truck terminal at least 200 ft from any R district, institutions for contagious disease or addiction treatment"
+   ],
+   "transitional_uses": [],
+   "form_rules": [
+    "No coverage or yard requirements",
+    "Floor area ratio 5.0",
+    "Parking: about one space per 1,500 sq ft of floor area over 7,500 sq ft; loading required"
+   ],
+   "summary": "Light manufacturing and industry; no housing; 5.0 floor area ratio.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": 0,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 5.0,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#7b94d4"
+  },
+  {
+   "code": "M-2",
+   "name": "Heavy Industrial District",
+   "family": "Industrial",
+   "section": "212",
+   "rank": 17,
+   "permitted_uses": [
+    "Heavy industry",
+    "Food processing"
+   ],
+   "excluded_uses": [
+    "Dwelling, hotel, motel, boarding house, school or institution for human habitation"
+   ],
+   "conditional_uses": [
+    "Same as M-1, plus smelter, garbage incineration, corrosive acid or alkali, cement, gypsum, explosives, petroleum refining, abattoir"
+   ],
+   "transitional_uses": [],
+   "form_rules": [
+    "No coverage or yard requirements",
+    "Floor area ratio 5.0",
+    "Parking: one space per 2,000 sq ft of floor area over 10,000 sq ft for M-2 uses; loading required"
+   ],
+   "summary": "Heavy industry, food processing, and by approval the noxious trades; no housing; 5.0 floor area ratio.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": 0,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": 5.0,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "color": "#4e3a94"
+  },
+  {
+   "code": "P",
+   "name": "Public District",
+   "family": "Public",
+   "section": null,
+   "permitted_uses": [
+    "Publicly owned land and facilities"
+   ],
+   "conditional_uses": [],
+   "transitional_uses": [],
+   "form_rules": [],
+   "summary": "Land in public use. New after 1960.",
+   "form": {
+    "min_lot_sqft": null,
+    "lot_sqft_per_unit": null,
+    "max_units_per_lot": null,
+    "max_coverage_interior": null,
+    "max_coverage_corner": null,
+    "height_limit_ft": null,
+    "max_far": null,
+    "rear_yard_ft": null,
+    "parking_per_unit": null
+   },
+   "rank": 18,
+   "color": "#8e9aa3"
+  }
+ ],
+ "form_fields": {
+  "min_lot_sqft": "Minimum lot area for new lots (sq ft)",
+  "lot_sqft_per_unit": "Lot area required per dwelling unit (sq ft); in C districts it follows the nearest R district",
+  "max_units_per_lot": "Dwelling units allowed per lot (0 = no housing)",
+  "max_coverage_interior": "Maximum lot coverage, interior lot",
+  "max_coverage_corner": "Maximum lot coverage, corner lot",
+  "height_limit_ft": "Height limit for dwellings (ft); null where FAR governs",
+  "max_far": "Maximum floor area ratio",
+  "rear_yard_ft": "Required rear yard (ft)",
+  "parking_per_unit": "Parking spaces per dwelling unit"
+ },
+ "verify_glyphs": {
+  "P": {
+   "template": "scripts/templates/P_1964.png",
+   "min_ncc": 0.8
+  }
+ }
+}
