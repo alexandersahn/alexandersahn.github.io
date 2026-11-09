@@ -204,7 +204,6 @@ catch (e) { $("loading").textContent = "The map data did not load. Reload the pa
 const wanted = new URLSearchParams(location.search).get("city");
 const city = cities.find(c => c.slug === wanted) || cities[0];
 const BASE = `${city.slug}/`;
-const PDFS = city.pdfs || {};
 for (const fld in city.form || {}) Object.assign(FORM[fld], city.form[fld]);
 document.title = `${city.name} · Historical Zoning Atlas`;
 if (cities.length > 1) {
@@ -380,9 +379,9 @@ async function setYear(y) {
     opt.textContent = FORM[fld].label + (has ? "" : y === TODAY ? " (not in today's data)" : ` (not regulated in ${y})`);
     if (colorBy === fld && !has) { colorBy = "zone"; $("color-by").value = "zone"; }
   }
-  const pdf = PDFS[y];
-  $("source").innerHTML = pdf
-    ? `${esc(d.rules.map_title || "Zoning map")}. <a href="${BASE}pdf/${pdf}" target="_blank" rel="noopener">View the original scans</a>`
+  const scans = city.scans;
+  $("source").innerHTML = scans && !d.rules.no_scan
+    ? `${esc(d.rules.map_title || "Zoning map")}. <a href="${esc(scans.url)}" target="_blank" rel="noopener">View the original scans at ${esc(scans.label)}</a>.${scans.thanks ? ` Thanks to <a href="${esc(scans.thanks.url)}" target="_blank" rel="noopener">${esc(scans.thanks.name)}</a> ${esc(scans.thanks.for)}.` : ""}`
     : `${esc(d.rules.map_title || "")}${d.rules.source_url ? `. <a href="${esc(d.rules.source_url)}" target="_blank" rel="noopener">Open the city's data</a>${d.rules.official_map_url ? ` or <a href="${esc(d.rules.official_map_url)}" target="_blank" rel="noopener">the official zoning map</a>` : ""}` : ""}`;
   renderYears(); applyStyle(); showSummary();
   try { history.replaceState(null, "", `#y${y}`); } catch (e) {}

@@ -33,14 +33,14 @@
         ]
       ]
     },
-    "pdfs": {
-      "1921": "sf_zoning_1921.pdf",
-      "1935": "sf_zoning_1935.pdf",
-      "1960": "sf_zoning_1960.pdf",
-      "1965": "sf_zoning_1965.pdf",
-      "1968": "sf_zoning_1968.pdf",
-      "1972": "sf_zoning_1972.pdf",
-      "1975": "sf_zoning_1975.pdf"
+    "scans": {
+      "url": "https://data.sf.gov/Geographic-Locations-and-Boundaries/Historic-Zoning-Maps/ekvb-kch8/about_data",
+      "label": "DataSF",
+      "thanks": {
+        "name": "Steven Bacio",
+        "url": "https://github.com/Grow-SF/sfzoning",
+        "for": "for scanning these maps"
+      }
     }
   },
   {
