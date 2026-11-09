@@ -1,0 +1,213 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0;font:14px system-ui}[hidden]{display:none!important}</style></head><body><title>District Label Reader</title>
+<!-- Template from the hand-label-reader skill. Set the <title>, <h1> and lede for the
+     task; everything else is driven by label_data/sets.json and label_data/queue_<set>.json. -->
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a sticky work bar over a dense grid of map crops; each crop carries its own answer row. */
+:root {
+  --bg: #f3f4f1; --panel: #ffffff; --ink: #1d2327; --muted: #5d676d; --rule: #d5dad6;
+  --accent: #b23a2a; --chosen: #1d2327; --chosen-ink: #ffffff; --guess: #b23a2a; --done: #2f7a3a;
+  --f-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-body: "Public Sans", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #171a1c; --panel: #212528; --ink: #e6e9e7; --muted: #9aa3a8; --rule: #353b3f;
+  --accent: #e0755f; --chosen: #e6e9e7; --chosen-ink: #171a1c; --guess: #e0755f; --done: #7cc286; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #171a1c; --panel: #212528; --ink: #e6e9e7; --muted: #9aa3a8; --rule: #353b3f;
+  --accent: #e0755f; --chosen: #e6e9e7; --chosen-ink: #171a1c; --guess: #e0755f; --done: #7cc286; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font: 14px/1.45 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 0 48px; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 14px 10px;
+  border-bottom: 1px solid var(--rule); display: grid; gap: 8px; }
+h1 { font: 700 26px/1 var(--f-display); letter-spacing: .02em; text-transform: uppercase; margin: 0; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 70ch; }
+.bar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.seg button { font: 500 12px var(--f-mono); padding: 5px 10px; border: 0; background: var(--panel); color: var(--ink); cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--rule); }
+.seg button[aria-pressed="true"] { background: var(--chosen); color: var(--chosen-ink); }
+.count { font: 500 12px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.meter { flex: 1 1 160px; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; min-width: 120px; max-width: 320px; }
+.meter i { display: block; height: 100%; background: var(--done); width: 0; transition: width .2s; }
+.keys { font: 400 12px var(--f-mono); color: var(--muted); }
+.note { margin: 12px 0 0; padding: 8px 12px; border: 1px solid var(--accent); color: var(--ink); border-radius: 4px; }
+main { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 14px; margin-top: 14px; }
+.card { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; display: grid; outline: none; min-width: 0; }
+.card:focus-visible, .card.active { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
+.crop { width: 100%; max-width: 100%; aspect-ratio: 560 / 358; background-color: #fff; background-repeat: no-repeat; }
+.meta { display: flex; justify-content: space-between; gap: 8px; padding: 6px 10px 0; font: 400 11px var(--f-mono); color: var(--muted); }
+.meta .g { color: var(--guess); }
+.meta .ok { color: var(--done); font-weight: 500; }
+.codes { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px 10px 10px; }
+.codes button { font: 500 12px var(--f-mono); padding: 4px 7px; border: 1px solid var(--rule); border-radius: 3px; background: transparent; color: var(--ink); cursor: pointer; }
+.codes button:hover { border-color: var(--ink); }
+.codes button.guess { border-color: var(--guess); color: var(--guess); }
+.codes button[aria-pressed="true"] { background: var(--chosen); border-color: var(--chosen); color: var(--chosen-ink); }
+.codes button.alt { font-family: var(--f-body); }
+.codes kbd { font: 400 10px var(--f-mono); opacity: .55; margin-left: 3px; }
+.legend { margin: 0; }
+.legend summary { font: 500 12px var(--f-mono); color: var(--muted); cursor: pointer; }
+.legend img { display: block; max-width: min(100%, 720px); max-height: 180px; margin-top: 6px; background: #fff; border: 1px solid var(--rule); border-radius: 4px; }
+.empty { grid-column: 1 / -1; padding: 32px; text-align: center; color: var(--muted); border: 1px dashed var(--rule); border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+</style>
+
+<header>
+  <h1 id="title">District Label Reader</h1>
+  <p class="lede" id="lede">Each crop shows one spot on a zoning sheet where the reader was unsure, boxed in red. For a year, pick the district code printed there, even if the box only catches part of it. For a "patterns" set, pick the district whose hatch pattern fills the box. For a "fill" set, the red box is a whole block no label reached: pick the district it lies in, if the map shows it, or "No label in box" to leave the district inferred for that block. On every other set, pick "Not a label" for street names, numbers, lines or a box that is not on one district.</p>
+  <div class="bar">
+    <div class="seg" id="sets" role="group" aria-label="Set"></div>
+    <div class="seg" id="filter" role="group" aria-label="Show">
+      <button type="button" data-f="todo" aria-pressed="true">To do</button>
+      <button type="button" data-f="done" aria-pressed="false">Done</button>
+      <button type="button" data-f="all" aria-pressed="false">All</button>
+    </div>
+    <span class="count" id="count">Loading…</span>
+    <span class="meter" aria-hidden="true"><i id="meter"></i></span>
+  </div>
+  <div class="keys">Keyboard: click a crop, then press 1–9, 0, - and = for the answers in order, X for no label, U for can't tell. The next crop is selected after each answer.</div>
+  <details class="legend" id="legend" open hidden><summary>Map legend</summary><img id="legend-img" alt="The map's printed legend"></details>
+  <p class="note" id="note" hidden></p>
+</header>
+<main id="grid" aria-live="polite"><div class="empty">Loading the queue…</div></main>
+
+<script>
+(() => {
+const $ = (id) => document.getElementById(id);
+const KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="];
+let sets = [], set = null, queue = null, answers = {}, filter = "todo", db = null, active = null, canWrite = true;
+
+function note(msg) { $("note").textContent = msg; $("note").hidden = !msg; }
+
+function visible() {
+  if (!queue) return [];
+  return queue.items.filter(it => filter === "all" || (filter === "done") === (it.id in answers));
+}
+
+function render() {
+  if (!queue) return;
+  const items = queue.items, done = items.filter(it => it.id in answers).length;
+  $("count").textContent = `${done} of ${items.length} read · ${set}`;
+  $("meter").style.width = `${items.length ? 100 * done / items.length : 0}%`;
+  const vis = visible();
+  if (!vis.length) {
+    $("grid").innerHTML = `<div class="empty">${filter === "todo" ? "Every crop in " + set + " has an answer. Claude will fold them in on its next run." : "Nothing here yet."}</div>`;
+    return;
+  }
+  const codes = queue.codes;
+  const xName = String(queue.set).startsWith("fill") ? "No label in box" : "Not a label";
+  $("grid").innerHTML = vis.map(it => {
+    const a = answers[it.id];
+    const btn = (code, label, k, cls = "") =>
+      `<button type="button" class="${cls}${code === it.guess ? " guess" : ""}" data-code="${code}" aria-pressed="${a === code}">${label}${k ? `<kbd>${k}</kbd>` : ""}</button>`;
+    return `<article class="card${active === it.id ? " active" : ""}" tabindex="0" data-id="${it.id}">
+      <div class="crop" role="img" aria-label="Crop around a possible label, ${it.where}"
+        style="background-image:url(${it.sprite});background-size:${it.cols * 100}% ${it.rows * 100}%;background-position:${it.cols > 1 ? 100 * it.col / (it.cols - 1) : 0}% ${it.rows > 1 ? 100 * it.row / (it.rows - 1) : 0}%"></div>
+      <div class="meta"><span>${it.where}${it.flag ? " · " + it.flag : ""}</span>
+        ${a ? `<span class="ok">${a === "X" ? xName.toLowerCase() : a === "?" ? "can't tell" : a}</span>` : `<span class="g">guess ${it.guess === "X" ? "not a label" : it.guess} ${Math.round(100 * it.prob)}%</span>`}</div>
+      <div class="codes">${codes.map((c, i) => btn(c, (queue.labels || {})[c] || c, KEYS[i] || "")).join("")}${btn("X", xName, "X", "alt ")}${btn("?", "Can't tell", "U", "alt ")}</div>
+    </article>`;
+  }).join("");
+}
+
+async function answer(id, code) {
+  if (!db || !canWrite) return;
+  const it = queue.items.find(x => x.id === id);
+  const prev = answers[id];
+  const ref = db.collection("labels").doc(id);
+  try {
+    if (prev === code) { delete answers[id]; render(); await ref.delete(); return; }
+    answers[id] = code; render();
+    await ref.set({ set: queue.set, ...(it.key || {}), code, guess: it.guess, at: new Date().toISOString() });
+  } catch (e) {
+    if (prev === undefined) delete answers[id]; else answers[id] = prev;
+    render();
+    if (e && e.code === "invalid_argument") { canWrite = false; note("This view can't save answers. Open the page as its owner to answer."); }
+    else note("That answer didn't save. Check your connection and click it again.");
+  }
+}
+
+function advance(fromId) {
+  const vis = visible();
+  const i = vis.findIndex(x => x.id === fromId);
+  const next = vis.slice(i + 1).find(x => !(x.id in answers)) || vis.find(x => !(x.id in answers));
+  active = next ? next.id : null;
+  render();
+  if (active) { const el = document.querySelector(`[data-id="${active}"]`); if (el) { el.focus({ preventScroll: true }); el.scrollIntoView({ block: "nearest" }); } }
+}
+
+$("grid").addEventListener("click", (e) => {
+  const card = e.target.closest(".card"); if (!card) return;
+  active = card.dataset.id;
+  const b = e.target.closest("button[data-code]");
+  if (b) { const id = active; answer(id, b.dataset.code); if (filter === "todo") advance(id); else render(); }
+  else document.querySelectorAll(".card.active").forEach(c => c.classList.toggle("active", c === card));
+});
+document.addEventListener("keydown", (e) => {
+  if (!active || !queue || e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  let code = null;
+  if (k === "x") code = "X"; else if (k === "u") code = "?";
+  else { const i = KEYS.indexOf(k); if (i >= 0 && i < queue.codes.length) code = queue.codes[i]; }
+  if (!code) return;
+  e.preventDefault();
+  const id = active; answer(id, code); advance(id);
+});
+$("filter").addEventListener("click", (e) => {
+  const b = e.target.closest("button[data-f]"); if (!b) return;
+  filter = b.dataset.f;
+  $("filter").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  render();
+});
+$("sets").addEventListener("click", (e) => { const b = e.target.closest("button[data-s]"); if (b) loadSet(b.dataset.s); });
+
+async function loadSet(s) {
+  set = s; active = null;
+  $("sets").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.s === s));
+  $("grid").innerHTML = `<div class="empty">Loading ${s}…</div>`;
+  try { queue = await (await fetch(`label_data/queue_${s}.json`)).json(); }
+  catch (e) { $("grid").innerHTML = `<div class="empty">The ${s} queue didn't load. Reload the page to try again.</div>`; return; }
+  $("legend").hidden = !queue.legend;
+  if (queue.legend) $("legend-img").src = queue.legend;
+  render();
+}
+
+let unsub = null;
+async function connect() {
+  db = await window.claude?.use?.("db") ?? null;
+  if (!db) {
+    // Archived copy on the website: show the saved answers, read-only.
+    try {
+      answers = await (await fetch("answers.json")).json();
+      filter = "all";
+      $("filter").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x.dataset.f === "all"));
+      note("Archived copy of the San Francisco labeling work, November 2026. These are the saved answers; new answers are not saved here.");
+      render();
+    } catch (e) { note("The saved answers did not load."); }
+    return;
+  }
+  const timer = setTimeout(() => note("Saved answers haven't loaded yet. You can keep going; new answers still save."), 10000);
+  unsub = db.collection("labels").onSnapshot((snap) => {
+    if (!snap.metadata.fromCache) { clearTimeout(timer); note(""); }
+    answers = {};
+    snap.docs.forEach(d => { const v = d.data(); if (v && v.code) answers[d.id] = v.code; });
+    render();
+  }, () => { clearTimeout(timer); note("Saved answers couldn't be loaded. Reload the page to try again."); });
+}
+
+(async () => {
+  try { sets = (await (await fetch("label_data/sets.json")).json()).map(String); } catch (e) { sets = []; }
+  if (!sets.length) { $("grid").innerHTML = `<div class="empty">No label queues are published yet.</div>`; $("count").textContent = ""; return; }
+  $("sets").innerHTML = sets.map(s => `<button type="button" data-s="${s}" aria-pressed="false">${s}</button>`).join("");
+  loadSet(sets[0]);
+  connect();
+})();
+})();
+</script>
+</body></html>
