@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "san-francisco",
+    "name": "San Francisco",
+    "today_year": 2026,
+    "block_label": "Assessor block",
+    "attribution": "Zoning maps: SF City Planning · Blocks and streets: DataSF",
+    "view": {
+      "center": [-122.442, 37.758], "zoom": 11.9, "minZoom": 10.5,
+      "maxBounds": [[-122.75, 37.62], [-122.2, 37.9]],
+      "fit": [[-122.515, 37.705], [-122.355, 37.812]]
+    },
+    "pdfs": {
+      "1921": "sf_zoning_1921.pdf", "1935": "sf_zoning_1935.pdf", "1960": "sf_zoning_1960.pdf",
+      "1965": "sf_zoning_1965.pdf", "1968": "sf_zoning_1968.pdf", "1972": "sf_zoning_1972.pdf",
+      "1975": "sf_zoning_1975.pdf"
+    }
+  }
+]

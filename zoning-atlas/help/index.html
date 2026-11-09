@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Read a Zoning Map</title>
+<meta name="description" content="Help digitize historical zoning maps by reading small pieces of them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #eef2f4; --panel: #ffffff; --ink: #17222b; --muted: #5b6a74; --rule: #d6dee3; --accent: #1f5f8b;
+  --chip: #e8eff3; --right: #2f7a3a; --wrong: #b23a2a; color-scheme: light;
+  --f-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e151a; --panel: #141d23; --ink: #e2e8ec; --muted: #94a4ae; --rule: #263540; --accent: #74b2de;
+  --chip: #1d2a33; --right: #7cc286; --wrong: #e0755f; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e151a; --panel: #141d23; --ink: #e2e8ec; --muted: #94a4ae; --rule: #263540; --accent: #74b2de;
+  --chip: #1d2a33; --right: #7cc286; --wrong: #e0755f; color-scheme: dark }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--f-body);
+  padding: 16px max(16px, env(safe-area-inset-right, 0px)) 40px max(16px, env(safe-area-inset-left, 0px)); }
+.wrap { max-width: 720px; margin: 0 auto; display: grid; gap: 12px; }
+.eyebrow { font: 500 11px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; }
+.eyebrow a { color: inherit; }
+h1 { font: 700 34px/1 var(--f-display); letter-spacing: .01em; text-transform: uppercase; margin: 0; text-wrap: balance; }
+h2 { font: 600 24px/1.1 var(--f-display); margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 62ch; }
+.muted { color: var(--muted); font-size: 13px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 14px; display: grid; gap: 10px; }
+.notice { border-color: var(--accent); font-size: 13px; }
+.top { display: flex; align-items: center; gap: 12px; }
+.meter { flex: 1; height: 6px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.meter i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .15s; }
+.count { font: 500 12px var(--f-mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.crop { width: 100%; max-width: calc(44vh * 560 / 358); justify-self: center; aspect-ratio: 560 / 358; background-color: #fff; background-repeat: no-repeat; background-size: 100% 100%; border: 1px solid var(--rule); border-radius: 4px; }
+.legend { margin: 0; }
+.legend summary { font: 500 12px var(--f-mono); color: var(--muted); cursor: pointer; padding: 4px 0; }
+.legend img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: #fff; border: 1px solid var(--rule); border-radius: 4px; }
+.codes { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 6px; }
+.codes.pattern { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+.alts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.codes button, .alts button { min-height: 44px; padding: 6px 8px; border: 1px solid var(--rule); border-radius: 4px; background: var(--chip); display: flex; align-items: center; justify-content: center; gap: 6px; }
+.codes button { font: 500 14px var(--f-mono); }
+.codes button:hover, .alts button:hover { border-color: var(--ink); }
+.codes button:disabled, .alts button:disabled { cursor: default; opacity: .55; }
+.codes button.is-right, .alts button.is-right { opacity: 1; background: var(--right); border-color: var(--right); color: #fff; }
+.codes button.is-wrong, .alts button.is-wrong { opacity: 1; background: var(--wrong); border-color: var(--wrong); color: #fff; }
+kbd { font: 400 10px var(--f-mono); opacity: .6; }
+.primary { justify-self: start; min-height: 44px; padding: 8px 18px; border: 0; border-radius: 4px; background: var(--accent); color: var(--panel); font-weight: 600; }
+.link { background: none; border: 0; padding: 4px 0; color: var(--muted); font-size: 13px; text-decoration: underline; justify-self: start; }
+.row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+.feedback { font-weight: 500; min-height: 22px; }
+@media (hover: none) { kbd { display: none; } }
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow"><span>Historical Zoning Atlas</span><a href="../">Back to the map</a></div>
+  <div class="panel notice" id="notice" hidden></div>
+
+  <section class="panel" id="intro">
+    <h1>Read a zoning map</h1>
+    <p>Computers misread parts of old zoning maps. You can help by looking at small pieces of them and saying what each one shows. A round is 20 pieces and takes about three minutes, and no account is needed.</p>
+    <p class="muted">We save your answers with a random ID made in this browser. We don't collect your name, email or IP address. Several people read each piece, and a piece is used only when they agree.</p>
+    <button class="primary" id="start" type="button">Start reading</button>
+  </section>
+
+  <section class="panel" id="work" hidden>
+    <div class="top"><span class="count" id="count"></span><div class="meter" aria-hidden="true"><i id="meter"></i></div></div>
+    <h2 id="prompt"></h2>
+    <p class="muted" id="sub"></p>
+    <div class="crop" id="crop" role="img"></div>
+    <div class="codes" id="codes" role="group" aria-label="Answers"></div>
+    <div class="alts" id="alts" role="group" aria-label="Other answers"></div>
+    <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+    <div class="row">
+      <button class="link" id="undo" type="button" hidden>Change my last answer</button>
+      <button class="primary" id="next" type="button" hidden>Next</button>
+    </div>
+    <details class="legend" id="legend" open hidden><summary>The map's legend</summary><img id="legend-img" alt="The printed legend of this map, showing each district's pattern"></details>
+  </section>
+
+  <section class="panel" id="done" hidden>
+    <h2>Thank you</h2>
+    <p id="done-text"></p>
+    <button class="primary" id="again" type="button">Read 20 more</button>
+  </section>
+</div>
+
+<script>
+(() => {
+// Paste the Google Apps Script web app URL here to start collecting votes.
+const VOTES_URL = "https://script.google.com/macros/s/AKfycbxbyUHV4px0CEliiZ4ZycN4bvvPQsvf-Y60T9zXZj_bzO8_AuhiTxFEsq6OSvt5rcJtvQ/exec";
+const ROUND = 20, FLUSH_EVERY = 5;
+const KEYS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-", "="];
+const $ = (id) => document.getElementById(id);
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("zonecrowd." + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem("zonecrowd." + k, JSON.stringify(v)); } catch (e) {} },
+};
+const randomId = () => Array.from(crypto.getRandomValues(new Uint8Array(10)), b => b.toString(36).padStart(2, "0")).join("").slice(0, 16);
+
+// Only a local test server may swap the endpoint.
+const local = ["localhost", "127.0.0.1"].includes(location.hostname);
+const endpoint = (local && new URLSearchParams(location.search).get("endpoint")) || VOTES_URL;
+
+const anon = store.get("anon") || randomId(); store.set("anon", anon);
+let session = randomId();
+let manifest, setData, cards = [], pos = 0, seq = 0, shownAt = 0, last = null, waiting = false;
+let pending = store.get("pending", []);
+let seen = new Set(store.get("seen", []));
+let practiced = new Set(store.get("practiced", []));
+let total = store.get("total", 0);
+
+function notice(msg) { $("notice").textContent = msg; $("notice").hidden = !msg; }
+function show(id) { ["intro", "work", "done"].forEach(s => { $(s).hidden = s !== id; }); }
+
+function flush(useBeacon) {
+  if (!endpoint || !pending.length) return;
+  const batch = pending.slice(0, 30);
+  const body = JSON.stringify({ votes: batch });
+  if (useBeacon && navigator.sendBeacon) {
+    if (navigator.sendBeacon(endpoint, new Blob([body], { type: "text/plain;charset=utf-8" }))) { pending = pending.slice(batch.length); store.set("pending", pending); }
+    return;
+  }
+  pending = pending.slice(batch.length); store.set("pending", pending);
+  fetch(endpoint, { method: "POST", headers: { "Content-Type": "text/plain;charset=utf-8" }, body })
+    .then(r => { if (!r.ok) throw new Error(r.status); })
+    .catch(() => { pending = batch.concat(pending); store.set("pending", pending); });
+}
+
+async function fetchCounts() {
+  if (!endpoint) return {};
+  try {
+    const ctl = new AbortController();
+    const t = setTimeout(() => ctl.abort(), 6000);
+    const r = await fetch(endpoint, { signal: ctl.signal });
+    clearTimeout(t);
+    return (await r.json()).counts || {};
+  } catch (e) { return {}; }
+}
+
+const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+async function loadSet(name) {
+  return (await fetch(`tasks/${name}.json`)).json();
+}
+
+async function startRound() {
+  $("start").disabled = true; $("again").disabled = true;
+  const counts = await fetchCounts();
+  const need = (s) => s.need;
+  const target = manifest.target_votes;
+  const loaded = await Promise.all(manifest.sets.map(m => loadSet(m.set)));
+  loaded.forEach(s => {
+    s.open = s.items.filter(i => !seen.has(i.id));
+    s.need = s.open.reduce((sum, i) => sum + Math.max(0, target - (counts[i.id] || 0)), 0);
+  });
+  const avail = loaded.filter(s => s.open.length);
+  $("start").disabled = false; $("again").disabled = false;
+  if (!avail.length) { show("done"); $("done-text").textContent = "You've read every piece we have right now. Thank you. Please check back when the next map is ready."; $("again").hidden = true; return; }
+  // The set that most needs readers; among equals, a random one.
+  shuffle(avail).sort((a, b) => need(b) - need(a));
+  setData = avail[0];
+  const items = shuffle(setData.open.slice()).sort((a, b) => (counts[a.id] || 0) - (counts[b.id] || 0)).slice(0, ROUND);
+  const practice = practiced.has(setData.kind) ? [] : setData.practice.map(p => ({ ...p, isPractice: true }));
+  cards = practice.concat(items);
+  pos = 0; last = null; session = randomId();
+  show("work");
+  drawCard();
+}
+
+function promptFor(s, card) {
+  if (s.kind === "pattern") return ["Which pattern fills the red box?", `From San Francisco's ${s.year} zoning map. Compare it with the legend.`];
+  return ["What district code is printed in the red box?", `From San Francisco's ${s.year} zoning map. Choose the code even if the box catches only part of it.`];
+}
+
+function drawCard() {
+  const c = cards[pos], s = setData;
+  const [p, sub] = promptFor(s, c);
+  $("prompt").textContent = p;
+  $("sub").textContent = (c.isPractice ? "Practice: we'll show you the answer. " : "") + sub;
+  $("count").textContent = `${pos + 1} of ${cards.length}`;
+  $("meter").style.width = `${100 * pos / cards.length}%`;
+  const crop = $("crop");
+  crop.style.backgroundImage = `url(${c.img})`;
+  if (cards[pos + 1]) new Image().src = cards[pos + 1].img;
+  crop.setAttribute("aria-label", `A piece of the ${s.year} map with a red box. ${p}`);
+  $("legend").hidden = !s.legend;
+  if (s.legend) $("legend-img").src = s.legend;
+  const isPattern = s.kind === "pattern";
+  $("codes").className = "codes" + (isPattern ? " pattern" : "");
+  const btn = (code, label, key) => `<button type="button" data-code="${code}">${label}${key ? `<kbd>${key}</kbd>` : ""}</button>`;
+  $("codes").innerHTML = s.codes.map((code, i) => btn(code, s.labels[code] || code, KEYS[i])).join("");
+  $("alts").innerHTML = btn("X", isPattern ? "No single pattern" : "Not a district code", "X") + btn("?", "I can't tell", "U");
+  $("feedback").textContent = "";
+  $("next").hidden = true;
+  $("undo").hidden = !last;
+  waiting = false;
+  shownAt = performance.now();
+}
+
+function record(c, code) {
+  pending.push({ city: setData.city, set: setData.set, item: c.id, code, anon, session, seq: ++seq, ms: Math.round(performance.now() - shownAt), version: manifest.version });
+  store.set("pending", pending);
+  seen.add(c.id); store.set("seen", [...seen]);
+  if (pending.length >= FLUSH_EVERY) flush();
+}
+
+function codeName(code) {
+  const s = setData;
+  if (code === "X") return s.kind === "pattern" ? "no single pattern" : "not a district code";
+  return s.labels[code] || code;
+}
+
+function answer(code) {
+  if (waiting) return;
+  const c = cards[pos];
+  if (c.isPractice) {
+    waiting = true;
+    const right = code === c.answer;
+    document.querySelectorAll("#codes button, #alts button").forEach(b => {
+      b.disabled = true;
+      if (b.dataset.code === c.answer) b.classList.add("is-right");
+      else if (b.dataset.code === code) b.classList.add("is-wrong");
+    });
+    $("feedback").textContent = right ? "That's right." : `The answer is ${codeName(c.answer)}.`;
+    $("next").hidden = false;
+    $("next").focus({ preventScroll: true });
+    return;
+  }
+  record(c, code);
+  total += 1; store.set("total", total);
+  last = { pos, code };
+  advance();
+}
+
+function advance() {
+  pos += 1;
+  if (cards[pos - 1] && cards[pos - 1].isPractice && !(cards[pos] && cards[pos].isPractice)) { practiced.add(setData.kind); store.set("practiced", [...practiced]); }
+  if (pos < cards.length) { drawCard(); return; }
+  flush();
+  $("meter").style.width = "100%";
+  $("done-text").textContent = endpoint
+    ? `You've read ${total} ${total === 1 ? "piece" : "pieces"} so far. Each one helps put a historical zoning map online.`
+    : `You've read ${total} ${total === 1 ? "piece" : "pieces"} in this test. Your answers weren't saved.`;
+  show("done");
+}
+
+$("codes").addEventListener("click", (e) => { const b = e.target.closest("button[data-code]"); if (b) answer(b.dataset.code); });
+$("alts").addEventListener("click", (e) => { const b = e.target.closest("button[data-code]"); if (b) answer(b.dataset.code); });
+$("next").addEventListener("click", advance);
+$("undo").addEventListener("click", () => { if (!last) return; pos = last.pos; last = null; total = Math.max(0, total - 1); store.set("total", total); drawCard(); });
+$("start").addEventListener("click", startRound);
+$("again").addEventListener("click", startRound);
+document.addEventListener("keydown", (e) => {
+  if ($("work").hidden || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (waiting) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); advance(); } return; }
+  const k = e.key.toLowerCase();
+  let code = k === "x" ? "X" : k === "u" ? "?" : null;
+  if (!code) { const i = KEYS.indexOf(k); if (i >= 0 && i < setData.codes.length) code = setData.codes[i]; }
+  if (code) { e.preventDefault(); answer(code); }
+});
+window.addEventListener("pagehide", () => flush(true));
+
+(async () => {
+  if (!endpoint) notice("Test version: answers aren't being saved yet.");
+  try { manifest = await (await fetch("tasks/index.json")).json(); flush(); }
+  catch (e) { notice("The maps didn't load. Please reload the page."); $("start").disabled = true; }
+})();
+})();
+</script>
+</body>
+</html>
